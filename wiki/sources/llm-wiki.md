@@ -53,5 +53,5 @@ None — methodology source, not domain content. No entity or concept pages crea
 ## Notes
 
 - Tooling tips not adopted yet (revisit when relevant): [qmd](https://github.com/tobi/qmd) for hybrid BM25/vector search if the wiki outgrows the index file; Obsidian image-download hotkey; Marp slides; Dataview queries.
-- This wiki is **not yet a git repo** (system reports the directory isn't under git). The pattern recommends git for free version history — worth raising with the human as the wiki accumulates content.
+- This wiki is now under git (initialized 2026-05-10), per the pattern's recommendation for free version history.
 - The schema in [CLAUDE](../../CLAUDE.md) is meant to be co-evolved. Update it whenever conventions change, rather than letting practice drift from the documented pattern.
