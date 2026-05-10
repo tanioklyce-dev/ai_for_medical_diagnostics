@@ -3,7 +3,7 @@ type: overview
 title: AI for Medical Diagnostics — Overview
 added: 2026-05-10
 updated: 2026-05-10
-sources: [sources/ai-index-2026.md, sources/arise-state-of-clinical-ai-2026.md, sources/mai-dxo-sequential-diagnosis-2025.md, sources/ogut-ai-clinical-medicine-2025.md]
+sources: [sources/ai-index-2026.md, sources/arise-state-of-clinical-ai-2026.md, sources/mai-dxo-sequential-diagnosis-2025.md, sources/ogut-ai-clinical-medicine-2025.md, sources/klyce-computer-assisted-corneal-topography-1984.md, sources/maeda-klyce-keratoconus-screening-1994.md]
 tags: [overview]
 ---
 
@@ -62,6 +62,20 @@ The field is bifurcating along this evidence axis:
 - **[digital-twins-medicine](concepts/digital-twins-medicine.md)** — large publication/patent growth; only 12.1% of studies meet NASEM definition; Twin Health diabetes RCT (n=150) is the strongest result.
 - Multimodal biomedical AI publications grew 2 (2021) → 462 (2025). Vision-language and vision-omics models are the leading subcategories.
 - Patient perspectives literature grew 9 (2020) → 102 (2025); demographic disparities in acceptance documented; provider endorsement is the key determinant.
+
+## Historical depth: specialty-specific AI lineages
+
+The strong-evidence narrow-tool track has long roots in specific specialties. The longest continuous research program tracked in this wiki is **corneal-topography AI for keratoconus screening**:
+
+- 1984 — [klyce-computer-assisted-corneal-topography-1984](sources/klyce-computer-assisted-corneal-topography-1984.md): quantitative computer-based corneal topography on a PDP 11/34A. Klyce's discussion explicitly sketches an "expert system within the realm of current technology" — automated `diagnose` + continuously-learning `learn` modules — but defers building them.
+- 1994 — [maeda-klyce-keratoconus-screening-1994](sources/maeda-klyce-keratoconus-screening-1994.md): first explicitly-AI-labeled ophthalmology screening system (discriminant analysis + KPI + Pascal rule-based expert system). Validation: 89% sens / 99% spec / 96% acc.
+- 1995, 1997 — Maeda/Klyce/Smolek and Smolek/Klyce neural-network classifiers (not yet ingested).
+- 2016 — Gulshan deep-learning diabetic retinopathy (cited via [ogut-ai-clinical-medicine-2025](sources/ogut-ai-clinical-medicine-2025.md)).
+- 2025 — EyeFM multimodal foundation model (see [medical-imaging-ai](concepts/medical-imaging-ai.md)).
+
+See [keratoconus-screening-ai](concepts/keratoconus-screening-ai.md) for the full lineage, and [stephen-klyce](entities/stephen-klyce.md) for the principal investigator across the first three rungs. The KPI/DSI/OSI/CSI/SAI/IAI indices developed in 1994 are still used as engineered features and as baselines in modern deep-learning keratoconus papers — a rare 30+ year survival of feature engineering in clinical AI.
+
+This pre-2000 lineage matters for the wiki's broader framing: the **expert-system-then-neural-net-then-deep-learning ladder** that recurs across medical AI is not a 2020s phenomenon. It has specialty-specific 1980s–1990s origins in ophthalmology (Klyce), pathology (Heckerman/Horvitz Pathfinder 1992, see [eric-horvitz](entities/eric-horvitz.md)), and infectious disease (MYCIN, 1976). The 2025 LLM-orchestrator architectures like [mai-dxo](entities/mai-dxo.md) are the latest realization of an agenda with deep roots.
 
 ## Working hypothesis (refined 2026-05-10 post-ARISE)
 

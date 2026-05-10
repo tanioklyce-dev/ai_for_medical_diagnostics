@@ -39,3 +39,7 @@ When a recurring author appears across what otherwise look like independent thre
 - The Brodeur Buckley Manrai Rodman 2024 paper (ArXiv 2412.10849, the primary o1-preview NEJM-CPC paper) doesn't list Horvitz, but the analytical framework (Bayesian differential, sequential test selection) it analyzes is downstream of his theoretical work.
 - Look out for whether the FURM framework (Stanford Health Care's deployment-governance counterpart referenced by ARISE) has Microsoft-side ties — likely.
 - Possible future pages: **Adam Rodman** (Harvard, NEJM AI Associate Editor, [arise-network](arise-network.md) leadership, *Bedside Rounds* podcast, recurring coauthor in this corpus) and **Jonathan H. Chen** (Stanford, Inaugural Director for AI in Medical Education, ARISE co-PI, automation-bias / EHR-AI work). Both currently referenced inline from the [arise-network](arise-network.md) entry; promotion to own pages is judgment call deferred.
+
+## Parallel-specialty contemporary
+
+[stephen-klyce](stephen-klyce.md) at LSU (1979–2008) and now Mount Sinai pursued the same expert-system-era research agenda **specifically for ophthalmology**, with [maeda-klyce-keratoconus-screening-1994](../sources/maeda-klyce-keratoconus-screening-1994.md) (discriminant analysis + Pascal rule-based decision tree for keratoconus screening) sitting two years after Pathfinder (1992) in the same expert-system wave. Both researchers' careers span the expert-system → modern-LLM continuum and both are still actively publishing.

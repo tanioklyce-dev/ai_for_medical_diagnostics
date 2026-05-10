@@ -3,7 +3,7 @@ type: concept
 title: Medical imaging AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/ogut-ai-clinical-medicine-2025.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/ogut-ai-clinical-medicine-2025.md, ../sources/klyce-computer-assisted-corneal-topography-1984.md, ../sources/maeda-klyce-keratoconus-screening-1994.md]
 tags: [modality/radiology, modality/pathology, modality/cardiology, modality/ophthalmology, task/detection, task/classification, task/segmentation, evaluation/external-validation]
 ---
 
@@ -87,6 +87,19 @@ See [fda-510k-pathway](fda-510k-pathway.md) for the regulatory landscape underpi
 - [fda-510k-pathway](fda-510k-pathway.md) — the regulatory route for nearly all cleared imaging AI.
 - [ambient-ai-scribes](ambient-ai-scribes.md), [llm-clinical-reasoning](llm-clinical-reasoning.md), [agentic-clinical-ai](agentic-clinical-ai.md) — adjacent clinical AI categories that are *not* imaging.
 
+## The pre-deep-learning lineage in ophthalmology
+
+A long-running specialty-specific research program for **keratoconus screening from corneal topography** — see [keratoconus-screening-ai](keratoconus-screening-ai.md) — predates and informs modern ophthalmology AI:
+
+- **[klyce-computer-assisted-corneal-topography-1984](../sources/klyce-computer-assisted-corneal-topography-1984.md)** — Klyce IOVS 1984. First quantitative computer-based corneal topography (manual digitization → C-language pipeline on PDP 11/34A). Established the **measurement substrate**.
+- **[maeda-klyce-keratoconus-screening-1994](../sources/maeda-klyce-keratoconus-screening-1994.md)** — Maeda/Klyce/Smolek/Thompson IOVS 1994. First **explicitly AI-labeled** keratoconus screening system: 8 topographic indices → discriminant analysis → composite KPI → Pascal rule-based expert system. **89% sensitivity, 99% specificity, 96% accuracy** on validation. Predates Pathfinder's broader medical-AI adoption only by ~2 years (and Pathfinder itself dates to 1992, see [eric-horvitz](../entities/eric-horvitz.md)). Many of the 1994 group's indices (KPI, DSI, OSI, CSI, SAI, IAI) are still used as engineered features in modern keratoconus deep-learning systems.
+- **Maeda/Klyce/Smolek 1995 (neural network preliminary, IOVS 36:1327)** — rung three of the lineage. 100% training, 80% test accuracy on 7-category classification.
+- **Smolek & Klyce 1997 (IOVS 38:2290)** — systematic comparison of contemporary keratoconus-detection methods; the neural-network approach wins.
+- **Gulshan et al. *JAMA* 2016** (Ogut review citation) — deep-learning diabetic retinopathy in retinal fundus photographs. The deep-learning generation of ophthalmology AI.
+- **EyeFM** (Wu/Dai *Nature Medicine* Aug 2025, ARISE slide 52) — multimodal vision-language foundation model on 14.5M ocular images covering 5 imaging modalities. In an RCT of 16 ophthalmologists / 668 patients in China, AI-assistance lifted correct diagnosis rate **75% → 92%**, referral rate **81% → 92%**, with higher follow-up compliance.
+
+The same three-rung pattern (quantitative imaging → expert-system/classical-ML → neural network → deep learning) recurs across other modalities (cardiology ECG, pathology slides, dermatology photographs); the ophthalmology corneal-topography lineage is one of the **longest continuous research programs in clinical AI**, spanning Klyce 1984 → EyeFM 2025.
+
 ## Earlier landmark imaging-AI primary citations
 
 The [Ogut 2025 review](../sources/ogut-ai-clinical-medicine-2025.md) surfaces a useful pre-2025 citation chain for the imaging-AI primary literature:
@@ -107,3 +120,4 @@ These are useful for tracing the genealogy of the 2025 prospective imaging-RCT c
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Foundational Methods + Applied AI sections — primary citation chain for 2025 prospective trials)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 269–271, 273–276)
 - [ogut-ai-clinical-medicine-2025](../sources/ogut-ai-clinical-medicine-2025.md) (citation map for 2016–2021 landmark imaging-AI papers)
+- [klyce-computer-assisted-corneal-topography-1984](../sources/klyce-computer-assisted-corneal-topography-1984.md), [maeda-klyce-keratoconus-screening-1994](../sources/maeda-klyce-keratoconus-screening-1994.md) — pre-deep-learning ophthalmology lineage
