@@ -3,7 +3,7 @@ type: concept
 title: Medical imaging AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/ogut-ai-clinical-medicine-2025.md]
 tags: [modality/radiology, modality/pathology, modality/cardiology, modality/ophthalmology, task/detection, task/classification, task/segmentation, evaluation/external-validation]
 ---
 
@@ -87,6 +87,18 @@ See [fda-510k-pathway](fda-510k-pathway.md) for the regulatory landscape underpi
 - [fda-510k-pathway](fda-510k-pathway.md) — the regulatory route for nearly all cleared imaging AI.
 - [ambient-ai-scribes](ambient-ai-scribes.md), [llm-clinical-reasoning](llm-clinical-reasoning.md), [agentic-clinical-ai](agentic-clinical-ai.md) — adjacent clinical AI categories that are *not* imaging.
 
+## Earlier landmark imaging-AI primary citations
+
+The [Ogut 2025 review](../sources/ogut-ai-clinical-medicine-2025.md) surfaces a useful pre-2025 citation chain for the imaging-AI primary literature:
+
+- **Rodriguez-Ruiz et al. *J. Natl. Cancer Inst.* 2019** — stand-alone AI mammography on par with the average of **101 radiologists** at distinguishing malignant from benign lesions. Predates Vara MG; the original "AI matches radiologist average" mammography result.
+- **Mayo et al. *J. Digit. Imaging* 2019** — AI-augmented mammography CAD reduced false-positive marks by **69%** vs traditional CAD. Pre-Vara-MG primary for the false-alarm-reduction story.
+- **Gulshan et al. *JAMA* 2016** — deep learning for diabetic retinopathy detection in retinal fundus photographs (sensitivity comparable to ophthalmologists). The foundational ophthalmology AI paper.
+- **Försch, Klauschen, Hufnagl, Roth *Dtsch. Arztebl. Int.* 2021** — **pathologist sensitivity for lymph node metastasis detection rose 83% → 91% when paired with AI** as second reader. Pathology-specific evidence for the human-AI synergy pattern.
+- **Attia et al. *Lancet* 2019** — AI identifies asymptomatic atrial fibrillation **from normal-sinus-rhythm ECG**. The original opportunistic-ECG-screening paper; [echonext](../entities/echonext.md) and [present-shd](../entities/present-shd.md) descend from this lineage.
+
+These are useful for tracing the genealogy of the 2025 prospective imaging-RCT cohort — most current results are direct successors of these 2016–2021 landmark studies.
+
 ## Caveat: the illusion of multimodal readiness
 
 **Gu, Vozila et al., ArXiv Oct 2025** — leading multimodal medical models score well on benchmark questions even when key visual inputs are *missing or perturbed*. Models gave the correct answer well above chance on incomplete questions, with high-confidence chain-of-thought explanations describing visual features that were not present. Strong multimodal benchmark scores often reflect **shortcut learning** rather than visual grounding. ARISE flags this as a critical caveat: benchmark success ≠ clinical readiness.
@@ -94,3 +106,4 @@ See [fda-510k-pathway](fda-510k-pathway.md) for the regulatory landscape underpi
 ## Sources
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Foundational Methods + Applied AI sections — primary citation chain for 2025 prospective trials)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 269–271, 273–276)
+- [ogut-ai-clinical-medicine-2025](../sources/ogut-ai-clinical-medicine-2025.md) (citation map for 2016–2021 landmark imaging-AI papers)

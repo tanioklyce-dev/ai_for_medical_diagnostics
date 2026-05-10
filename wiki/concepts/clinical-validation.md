@@ -3,7 +3,7 @@ type: concept
 title: Clinical validation of medical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md, ../sources/ogut-ai-clinical-medicine-2025.md]
 tags: [evaluation, governance, prospective-trial, evidence]
 ---
 
@@ -73,6 +73,20 @@ The growth from 417 (2024) → 536 (2025) prospective imaging trial papers is a 
 - Where are the dark spots — specialties with high adoption but minimal prospective evidence (e.g., parts of radiology, pathology)?
 - What's the calibration story? AI may achieve high AUC but be poorly calibrated, leading to over/under-treatment downstream.
 
+## Pre-2025 ML-CDSS evidence-base finding (Vasey 2021)
+
+A pre-existing primary citation that complements the Bedi/Shah JAMA Jan 2025 "5%" finding: **Vasey, Ursprung, Beddoe et al., *JAMA Network Open* 2021** — systematic review of **37 ML-based clinical decision support studies**:
+
+- **~half showed improvement in clinician diagnostic performance.**
+- **~half showed no change or inconclusive results.**
+- **No clear improvement was observed in studies simulating real-world clinical settings.**
+
+Vasey 2021 sits in the literature as the pre-2025 anchor for the CDSS-evidence-base gap; Bedi/Shah JAMA Jan 2025 is the 2025 update at much larger n (519 vs 37). Together they make a strong case that *the published improvement claims for ML-CDSS have been historically softer than headlines suggest*, with the real-world-setting subset being the weakest. Surfaced via [ogut-ai-clinical-medicine-2025](../sources/ogut-ai-clinical-medicine-2025.md), Section 3.2.
+
+## Reporting-guideline standards (CONSORT-AI / SPIRIT-AI)
+
+Two extensions of the CONSORT and SPIRIT clinical-trial reporting standards specifically for AI interventions: **CONSORT-AI** (reporting completed trials) and **SPIRIT-AI** (protocol design for trials of AI interventions), both Ibrahim, Liu, Rivera et al. *Trials* 2021 / *Nature Medicine* 2020 / *Lancet Digital Health* 2020. These are the appropriate quality bar for prospective AI trials; adoption is the right metric for evidence-base maturity. ARISE 2026's 10-prediction list does *not* expect significant FDA regulatory progress in 2026, but standards-development at the journal / reviewer level may move faster.
+
 ## Sequential-diagnosis as a middle layer between vignette and trial
 
 The MAI-DxO paper ([mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md)) introduces [sdbench](sdbench.md), a benchmark methodology that occupies a useful middle ground in the validation hierarchy: more realistic than static MCQ vignettes, less realistic than prospective deployment trials. Its three methodological contributions are worth knowing as the **emerging standard for case-bench-style evaluation in 2025–26**:
@@ -98,3 +112,4 @@ Implication: a successful prospective trial of AI-assisted care does not by itse
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (slides 5, 32, 70–72, throughout)
 - [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md) (Sections 2, 3.3, 5.3 — SDBench methodology and constrained-physician note)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6, p. 271, 273, 278, including ARISE box)
+- [ogut-ai-clinical-medicine-2025](../sources/ogut-ai-clinical-medicine-2025.md) (citation map for Vasey 2021 ML-CDSS systematic review and CONSORT-AI / SPIRIT-AI standards)
