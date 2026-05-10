@@ -4,8 +4,8 @@ A personal research wiki on AI for medical diagnostics, built using the LLM-wiki
 
 ## Start here
 
-- **[Overview](https://github.com/tanioklyce-dev/ai_for_medical_diagnostics/blob/main/wiki/overview.md)** — evolving top-level synthesis of the field.
-- **[Index](https://github.com/tanioklyce-dev/ai_for_medical_diagnostics/blob/main/wiki/index.md)** — content catalog; every page listed with a one-line summary.
+- **[Overview](wiki/overview.md)** — evolving top-level synthesis of the field.
+- **[Index](wiki/index.md)** — content catalog; every page listed with a one-line summary.
 
 ## Layout
 
