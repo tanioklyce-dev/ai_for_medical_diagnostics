@@ -3,7 +3,7 @@ type: concept
 title: AI hallucination in medical contexts
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [evaluation/factuality, concern/safety, model-family/llm, risk]
 ---
 
@@ -61,7 +61,7 @@ The NOHARM benchmark tested leading LLMs on open-ended clinical reasoning tasks:
 - **11.8 to 14.6 severely harmful recommendations per 100 clinical cases.**
 - **76.6%** of these were errors of omission (e.g., failing to recommend a critical test) — not commission.
 
-The AI Index uses NOHARM to draw a sharp line: these findings apply to **general-purpose LLMs evaluated on open-ended clinical reasoning**, *not* the narrow task-specific tools driving most current clinical adoption (see [[ambient-ai-scribes]], [[trews]] for tools where the clinician oversight loop catches errors before harm).
+The AI Index uses NOHARM to draw a sharp line: these findings apply to **general-purpose LLMs evaluated on open-ended clinical reasoning**, *not* the narrow task-specific tools driving most current clinical adoption (see [ambient-ai-scribes](ambient-ai-scribes.md), [trews](../entities/trews.md) for tools where the clinician oversight loop catches errors before harm).
 
 ## The RAI tradeoff problem
 
@@ -71,19 +71,19 @@ Top takeaway #8 of the Responsible AI chapter: training techniques aimed at impr
 
 1. **Don't extrapolate from non-medical hallucination scores.** Per-domain variation is large; a model that hallucinates 30% on average might be much worse in health.
 2. **Scrutinize how models handle false patient premises.** The KaBLE finding suggests common test protocols (3rd-person fact recall) overstate real-world reliability.
-3. **Operating envelope matters.** A model with 14% severe-harm rate on open-ended clinical reasoning can still be safe in a constrained workflow with mandatory clinician review (see [[ambient-ai-scribes]]).
+3. **Operating envelope matters.** A model with 14% severe-harm rate on open-ended clinical reasoning can still be safe in a constrained workflow with mandatory clinician review (see [ambient-ai-scribes](ambient-ai-scribes.md)).
 4. **Calibration > raw accuracy.** A model that appropriately says "I don't know" outperforms a confident liar — even at lower top-1 accuracy.
 
 ## Open questions
 
 - Is the medical-domain hallucination penalty closing across model generations, or is it stable?
-- How do RAG-augmented or retrieval-grounded systems (e.g., [[abridge]]-style architectures with document grounding) shift these numbers?
+- How do RAG-augmented or retrieval-grounded systems (e.g., [abridge](../entities/abridge.md)-style architectures with document grounding) shift these numbers?
 - What's the right benchmark for *clinical-context-sensitivity* — a model's ability to flag uncertainty proportional to clinical risk?
 
 ## Related
-- [[clinical-validation]] — broader evidence-base context.
-- [[llm-clinical-reasoning]] — case-style benchmarks that miss this failure mode.
-- [[ai-index-2026]] — primary source.
+- [clinical-validation](clinical-validation.md) — broader evidence-base context.
+- [llm-clinical-reasoning](llm-clinical-reasoning.md) — case-style benchmarks that miss this failure mode.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 3.2, p. 134–138 — RAI benchmarks, HHEM, AA-Omniscience, KaBLE; Ch. 6.2 evidence gaps, p. 278 — NOHARM)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 3.2, p. 134–138 — RAI benchmarks, HHEM, AA-Omniscience, KaBLE; Ch. 6.2 evidence gaps, p. 278 — NOHARM)

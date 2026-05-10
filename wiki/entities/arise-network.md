@@ -3,7 +3,7 @@ type: entity
 title: ARISE Network (Stanford-Harvard)
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [organization/stanford, organization/harvard, governance, evaluation/external-validation]
 ---
 
@@ -25,7 +25,7 @@ The report reviewed **over 500 clinical AI studies** and surfaced findings that 
 | **Only 5% of studies used real clinical data** | Most clinical AI claims have not been validated against the actual deployment context |
 | **Conclusion**: AI performs most effectively when **supporting rather than replacing** clinician judgment | Argues against autonomous-AI framings, in favor of clinician-in-the-loop deployment |
 
-This is the single most influential finding cited in the AI Index 2026's Ch. 6 Evidence Gaps and Governance section (p. 278). It underpins the [[clinical-validation]] framing across the wiki.
+This is the single most influential finding cited in the AI Index 2026's Ch. 6 Evidence Gaps and Governance section (p. 278). It underpins the [clinical-validation](../concepts/clinical-validation.md) framing across the wiki.
 
 ## Companion: NOHARM benchmark
 
@@ -35,7 +35,7 @@ The AI Index discusses NOHARM alongside ARISE's findings (the report doesn't att
 - **76.6% were errors of omission** (e.g., failing to recommend a critical test).
 - These findings apply to **general-purpose LLMs evaluated on open-ended clinical reasoning**, not narrow task-specific tools.
 
-See [[ai-hallucination-medical]] for full treatment.
+See [ai-hallucination-medical](../concepts/ai-hallucination-medical.md) for full treatment.
 
 ## Significance
 
@@ -51,9 +51,9 @@ The AI Index suggests this kind of independent meta-evaluation is part of why go
 - Connections to other meta-research infrastructure (Cochrane, EQUATOR Network, IDEAL framework).
 
 ## Related
-- [[clinical-validation]] — ARISE's central topic.
-- [[ai-hallucination-medical]] — companion failure-mode evidence.
-- [[ai-index-2026]] — citing source.
+- [clinical-validation](../concepts/clinical-validation.md) — ARISE's central topic.
+- [ai-hallucination-medical](../concepts/ai-hallucination-medical.md) — companion failure-mode evidence.
+- [ai-index-2026](../sources/ai-index-2026.md) — citing source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2 Evidence Gaps and Governance, p. 278; Top Takeaway #12, p. 10)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 Evidence Gaps and Governance, p. 278; Top Takeaway #12, p. 10)

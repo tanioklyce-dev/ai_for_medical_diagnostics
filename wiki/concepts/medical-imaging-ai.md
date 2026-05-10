@@ -3,7 +3,7 @@ type: concept
 title: Medical imaging AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [modality/radiology, modality/pathology, modality/cardiology, modality/ophthalmology, task/detection, task/classification, task/segmentation, evaluation/external-validation]
 ---
 
@@ -66,12 +66,12 @@ Recent high-profile examples:
 Clearance rankings (cumulative 2016–25):
 - GE Healthcare 93, Siemens Healthineers 82, Shanghai United Imaging 38, Philips 36, Canon 35, Aidoc 30, Samsung 20, iSchemaView 20, Hyperfine 12, Viz.ai 12, Clarius Mobile Health 11, Brainlab 10, Zebra Medical Vision 9, RaySearch 8, Qure.ai 8.
 
-See [[fda-510k-pathway]] for the regulatory landscape underpinning this market.
+See [fda-510k-pathway](fda-510k-pathway.md) for the regulatory landscape underpinning this market.
 
 ## Related
-- [[clinical-validation]] — most published evaluations are not on real patient data.
-- [[fda-510k-pathway]] — the regulatory route for nearly all cleared imaging AI.
-- [[ambient-ai-scribes]], [[llm-clinical-reasoning]], [[agentic-clinical-ai]] — adjacent clinical AI categories that are *not* imaging.
+- [clinical-validation](clinical-validation.md) — most published evaluations are not on real patient data.
+- [fda-510k-pathway](fda-510k-pathway.md) — the regulatory route for nearly all cleared imaging AI.
+- [ambient-ai-scribes](ambient-ai-scribes.md), [llm-clinical-reasoning](llm-clinical-reasoning.md), [agentic-clinical-ai](agentic-clinical-ai.md) — adjacent clinical AI categories that are *not* imaging.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2, p. 269–271, 273–276)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 269–271, 273–276)

@@ -3,7 +3,7 @@ type: entity
 title: Evo 2
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [model-family/foundation-model, biomedical-ai/genomics, organization/arc-institute, organization/nvidia, organization/stanford]
 ---
 
@@ -42,7 +42,7 @@ A surprising 2025 result: **GPN-Star (200M parameters) outperformed Evo 2 (40B) 
 | Evo 2 | **40B** | 0.53 |
 | **GPN-Star** | **200M** | **0.75** |
 
-The takeaway from the AI Index: **scale alone is not yet sufficient** in genomic foundation models, and **training method and data curation remain important determinants** of performance. This mirrors the [[protein-language-models]] finding — MSAPairformer (111M) > ESM3 (98B) on ProteinGym.
+The takeaway from the AI Index: **scale alone is not yet sufficient** in genomic foundation models, and **training method and data curation remain important determinants** of performance. This mirrors the [protein-language-models](../concepts/protein-language-models.md) finding — MSAPairformer (111M) > ESM3 (98B) on ProteinGym.
 
 ## Where Evo 2 fits in the diagnostic pipeline
 
@@ -65,9 +65,9 @@ Evo 2 was released with **fully open weights**, contrasting with the closure tre
 - What's the regulatory framing for genomic-FM-derived clinical decisions?
 
 ## Related
-- [[protein-language-models]] — sibling model class.
-- [[cofolding-models]] — structure-prediction sibling.
-- [[ai-index-2026]] — primary source.
+- [protein-language-models](../concepts/protein-language-models.md) — sibling model class.
+- [cofolding-models](../concepts/cofolding-models.md) — structure-prediction sibling.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.1 Virtual Cell Models, p. 265–266; Ch. 5.2 Biological & Life Sciences foundation models table, p. 245)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.1 Virtual Cell Models, p. 265–266; Ch. 5.2 Biological & Life Sciences foundation models table, p. 245)

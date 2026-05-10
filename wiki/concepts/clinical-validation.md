@@ -3,7 +3,7 @@ type: concept
 title: Clinical validation of medical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [evaluation, governance, prospective-trial, evidence]
 ---
 
@@ -13,13 +13,13 @@ The central evidence tension in 2025 medical AI: deployment is accelerating much
 
 ## The headline finding (2026)
 
-The Stanford-Harvard [[arise-network]]'s inaugural *State of Clinical AI Report* (January 2026) reviewed **over 500 clinical AI studies** and concluded:
+The Stanford-Harvard [arise-network](../entities/arise-network.md)'s inaugural *State of Clinical AI Report* (January 2026) reviewed **over 500 clinical AI studies** and concluded:
 
 - **~half** relied on exam-style questions (e.g., USMLE-style, NEJM clinicopathological cases) rather than real patient data.
 - **Only 5%** used real clinical data.
 - The report's overall conclusion: AI performs most effectively when **supporting rather than replacing** clinician judgment.
 
-A separate peer-reviewed analysis ([Singh et al., 2025](https://www.bmj.com/)) of 1,016 FDA AI/ML device authorizations through Dec 2024 found that **only 2.4%** of devices with clinical studies were supported by randomized controlled trial data, with nearly all entering via the [[fda-510k-pathway]].
+A separate peer-reviewed analysis ([Singh et al., 2025](https://www.bmj.com/)) of 1,016 FDA AI/ML device authorizations through Dec 2024 found that **only 2.4%** of devices with clinical studies were supported by randomized controlled trial data, with nearly all entering via the [fda-510k-pathway](fda-510k-pathway.md).
 
 ## What "validation" can mean (gradient of rigor)
 
@@ -33,11 +33,11 @@ A separate peer-reviewed analysis ([Singh et al., 2025](https://www.bmj.com/)) o
 
 ## The narrow-tool vs. open-LLM distinction
 
-The 2026 AI Index makes a crucial framing point. Evidence-base concerns apply most sharply to **general-purpose LLMs in open-ended clinical reasoning** — see [[ai-hallucination-medical]] and the NOHARM benchmark (11.8–14.6 severely harmful recommendations per 100 cases for top LLMs, 76.6% errors of omission).
+The 2026 AI Index makes a crucial framing point. Evidence-base concerns apply most sharply to **general-purpose LLMs in open-ended clinical reasoning** — see [ai-hallucination-medical](ai-hallucination-medical.md) and the NOHARM benchmark (11.8–14.6 severely harmful recommendations per 100 cases for top LLMs, 76.6% errors of omission).
 
 By contrast, **narrow tools operating in constrained workflows with clinician oversight have generated much stronger real-world evidence**:
-- [[ambient-ai-scribes]] — multiple multi-site outcomes papers in 2025 ([[abridge]] deployment).
-- AI sepsis prediction — [[trews]] and COMPOSER reported absolute mortality reductions in prospective deployments.
+- [ambient-ai-scribes](ambient-ai-scribes.md) — multiple multi-site outcomes papers in 2025 ([abridge](../entities/abridge.md) deployment).
+- AI sepsis prediction — [trews](../entities/trews.md) and COMPOSER reported absolute mortality reductions in prospective deployments.
 
 This distinction shows up repeatedly in governance frameworks (FURM, GUIDE-AI Lab) and is likely to be a load-bearing organizing principle for the wiki.
 
@@ -62,4 +62,4 @@ The growth from 417 (2024) → 536 (2025) prospective imaging trial papers is a 
 - What's the calibration story? AI may achieve high AUC but be poorly calibrated, leading to over/under-treatment downstream.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6, p. 271, 273, 278, including ARISE box)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6, p. 271, 273, 278, including ARISE box)

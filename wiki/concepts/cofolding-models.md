@@ -3,17 +3,17 @@ type: concept
 title: Cofolding models
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [model-family/foundation-model, biomedical-ai/structure-prediction, evaluation/benchmark]
 ---
 
 # Cofolding models
 
-A class of structure-prediction models that **predict 3D structures formed by combinations of proteins, nucleic acids, drugs, and other biomolecules** simultaneously — rather than just protein-only structures. Inaugurated by [[alphafold-3]] (2024), with a community of open-source replications and extensions in 2025.
+A class of structure-prediction models that **predict 3D structures formed by combinations of proteins, nucleic acids, drugs, and other biomolecules** simultaneously — rather than just protein-only structures. Inaugurated by [alphafold-3](../entities/alphafold-3.md) (2024), with a community of open-source replications and extensions in 2025.
 
 ## Why cofolding matters
 
-Traditional structure prediction (AlphaFold 2, RoseTTAFold) handled proteins in isolation. Cofolding tackles the more clinically relevant problem: **how a small molecule (drug candidate) physically binds to a target protein**, or how protein-RNA-ligand complexes assemble. This is foundational for drug discovery and a key reason for the surge in [[ai-index-2026]]-tracked AI-for-drug-discovery publications (431 in 2018 → 3,311 in 2025).
+Traditional structure prediction (AlphaFold 2, RoseTTAFold) handled proteins in isolation. Cofolding tackles the more clinically relevant problem: **how a small molecule (drug candidate) physically binds to a target protein**, or how protein-RNA-ligand complexes assemble. This is foundational for drug discovery and a key reason for the surge in [ai-index-2026](../sources/ai-index-2026.md)-tracked AI-for-drug-discovery publications (431 in 2018 → 3,311 in 2025).
 
 ## The 2025 cofolding model lineup
 
@@ -74,10 +74,10 @@ Open-source replications of AlphaFold 3 — including **Boltz-2** and **OpenFold
 - Open licensing of Boltz-2 and OpenFold3 lowers the barrier for academic medical centers to do their own modeling.
 
 ## Related
-- [[alphafold-3]] — flagship entity.
-- [[protein-language-models]] — sequence-side complement.
-- [[evo-2]] — genomic-scale analog.
-- [[ai-index-2026]] — primary source.
+- [alphafold-3](../entities/alphafold-3.md) — flagship entity.
+- [protein-language-models](protein-language-models.md) — sequence-side complement.
+- [evo-2](../entities/evo-2.md) — genomic-scale analog.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.1, p. 262–264)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.1, p. 262–264)

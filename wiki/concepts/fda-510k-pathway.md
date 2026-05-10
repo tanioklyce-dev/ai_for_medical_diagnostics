@@ -3,7 +3,7 @@ type: concept
 title: FDA 510(k) pathway for AI/ML medical devices
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [regulation/fda-510k, regulation/samd, deployment]
 ---
 
@@ -61,7 +61,7 @@ The 510(k) pathway was designed to enable iteration on existing classes of devic
 - **Only 2.4%** of devices with clinical studies were supported by randomized controlled trial data.
 - **Nearly all** devices entered via the 510(k) pathway (vs. De Novo or PMA).
 
-This is the regulatory underpinning of the [[clinical-validation]] tension.
+This is the regulatory underpinning of the [clinical-validation](clinical-validation.md) tension.
 
 ## January 2025 FDA guidance on Total Product Life Cycle
 
@@ -76,9 +76,9 @@ In January 2025, the FDA issued draft guidance on AI-enabled device software fun
 **FDA clearance ≠ clinical adoption.** Financial, operational, and institutional barriers stand between regulatory authorization and real-world deployment. Healthcare systems typically require financial-clearance and cost-effectiveness justification before implementation. The cleared-device count is therefore a leading indicator of *availability*, not *use*.
 
 ## Related
-- [[clinical-validation]] — the evidence-rigor consequences of this pathway.
-- [[medical-imaging-ai]] — the dominant use case for cleared devices.
-- [[ambient-ai-scribes]] — most scribes are *not* devices and bypass this pathway entirely.
+- [clinical-validation](clinical-validation.md) — the evidence-rigor consequences of this pathway.
+- [medical-imaging-ai](medical-imaging-ai.md) — the dominant use case for cleared devices.
+- [ambient-ai-scribes](ambient-ai-scribes.md) — most scribes are *not* devices and bypass this pathway entirely.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2, p. 273–276)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 273–276)

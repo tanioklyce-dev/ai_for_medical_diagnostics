@@ -3,7 +3,7 @@ type: entity
 title: Abridge
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [organization/abridge, deployment, task/documentation]
 ---
 
@@ -29,7 +29,7 @@ Multi-site evidence (cited in the AI Index, all 2025):
 
 ## Why Abridge sits at the center of the 2025 clinical AI story
 
-The AI Index uses ambient scribes to draw a key contrast (Ch. 6.2, p. 278): narrow tools operating in **constrained workflows under clinician oversight** have generated strong real-world evidence, while general-purpose LLMs in open-ended clinical reasoning still produce concerning failure rates (NOHARM benchmark; see [[ai-hallucination-medical]]).
+The AI Index uses ambient scribes to draw a key contrast (Ch. 6.2, p. 278): narrow tools operating in **constrained workflows under clinician oversight** have generated strong real-world evidence, while general-purpose LLMs in open-ended clinical reasoning still produce concerning failure rates (NOHARM benchmark; see [ai-hallucination-medical](../concepts/ai-hallucination-medical.md)).
 
 Abridge's deployment breadth, plus the consistency of multi-site outcomes, makes it the canonical example of clinical AI working in production.
 
@@ -46,22 +46,22 @@ The AI Index doesn't enumerate Abridge competitors, but the ambient-scribe marke
 
 ## What Abridge isn't
 
-- **Not** an FDA-cleared medical device — scribes generally bypass [[fda-510k-pathway]] because they don't directly diagnose or treat.
+- **Not** an FDA-cleared medical device — scribes generally bypass [fda-510k-pathway](../concepts/fda-510k-pathway.md) because they don't directly diagnose or treat.
 - **Not** open-source.
 - **Not** a diagnostic tool — though downstream AI tools acting on AI-generated notes is a domain to watch.
 
 ## Open questions / follow-up sources
 
 - Patient-consent posture across U.S. states (the Mello et al. 2025 framework cited in Ch. 6.3 places ambient scribes in "notification" tier; some states require explicit consent legally).
-- How does Abridge handle the [[ai-hallucination-medical]] / fabrication concern in note generation? What's the verification flow?
+- How does Abridge handle the [ai-hallucination-medical](../concepts/ai-hallucination-medical.md) / fabrication concern in note generation? What's the verification flow?
 - Are productivity gains durable as physicians normalize to the tool?
 - Pricing model and ROI variance across health system types.
 - Outcomes for non-English-language encounters and underserved populations.
 
 ## Related
-- [[ambient-ai-scribes]] — the category.
-- [[clinical-validation]] — Abridge is the strongest evidence example for narrow workflow tools.
-- [[ai-index-2026]] — primary source.
+- [ambient-ai-scribes](../concepts/ambient-ai-scribes.md) — the category.
+- [clinical-validation](../concepts/clinical-validation.md) — Abridge is the strongest evidence example for narrow workflow tools.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2 Enterprise-Scale Deployments, p. 276–277)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 Enterprise-Scale Deployments, p. 276–277)

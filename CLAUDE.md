@@ -1,6 +1,6 @@
 # Wiki schema — AI for medical diagnostics
 
-This is a personal research wiki on **AI for medical diagnostics**, built using the LLM-wiki pattern (see [[llm-wiki]] for the meta-document). The LLM owns and maintains all wiki pages; the human curates sources and asks questions.
+This is a personal research wiki on **AI for medical diagnostics**, built using the LLM-wiki pattern (see [llm-wiki](wiki/sources/llm-wiki.md) for the meta-document). The LLM owns and maintains all wiki pages; the human curates sources and asks questions.
 
 ## Layers
 
@@ -25,7 +25,7 @@ Directories are created lazily when the first page of that type is written. Don'
 
 ## Page conventions
 
-- **Wikilinks**: Obsidian-style `[[slug]]` for internal cross-references. Filenames are unique across the vault, so `[[tempus-labs]]` resolves regardless of which folder it lives in.
+- **Cross-references**: standard markdown `[slug](relative/path/to/slug.md)` so links render on both Obsidian and GitHub. Filenames are globally unique across the vault, so the link text is always the slug; the path is whatever's relative from the file you're writing in (e.g. from `wiki/concepts/foo.md` to an entity page: `[tempus-labs](../entities/tempus-labs.md)`).
 - **Filenames**: lowercase, hyphenated, no spaces. e.g. `wiki/entities/tempus-labs.md`.
 - **Frontmatter** on every wiki page:
   ```yaml
@@ -34,13 +34,13 @@ Directories are created lazily when the first page of that type is written. Don'
   title: Display title
   added: YYYY-MM-DD
   updated: YYYY-MM-DD
-  sources: [list of [[source-page]] wikilinks supporting this page]
+  sources: [relative/path/to/source-page.md, ...]
   tags: [modality/radiology, regulation/fda, ...]
   ---
   ```
-- **Citations**: every domain claim should be traceable to a source. Inline form: `... 92% sensitivity ([[sources/foo-2024]])`. For dense sections, footnote style is fine.
+- **Citations**: every domain claim should be traceable to a source. Inline form: `... 92% sensitivity ([foo-2024](../sources/foo-2024.md))`. For dense sections, footnote style is fine.
 - **Contradictions**: when a newer source contradicts an older claim, don't delete the old one. Flag inline:
-  > ⚠️ [[ai-index-2026]] reports 89%, contradicting earlier 92% in [[foo-2024]].
+  > ⚠️ [ai-index-2026](../sources/ai-index-2026.md) reports 89%, contradicting earlier 92% in [foo-2024](../sources/foo-2024.md).
 
 ## Source page format
 
@@ -66,7 +66,7 @@ tags: [...]
 - bullet list, each with a section/page anchor in the original source where useful
 
 ## Entities and concepts touched
-- [[wikilinks]] to pages this source informed or created
+- markdown links to pages this source informed or created (e.g. `[tempus-labs](../entities/tempus-labs.md)`)
 
 ## Notes
 Contradictions with other sources, methodological caveats, follow-up questions.

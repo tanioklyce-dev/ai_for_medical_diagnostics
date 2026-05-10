@@ -10,7 +10,7 @@ tags: [meta, methodology]
 
 # LLM Wiki (meta-document)
 
-> Methodology source, not a domain source. This is the blueprint that defines how this entire wiki operates. The concrete instantiation for this project lives in [[CLAUDE]].
+> Methodology source, not a domain source. This is the blueprint that defines how this entire wiki operates. The concrete instantiation for this project lives in [CLAUDE](../../CLAUDE.md).
 
 ## Summary
 
@@ -38,8 +38,8 @@ Three operations: **ingest** (process a new source and propagate updates across 
 
 ## Bootstrap choices made for this project (2026-05-10)
 
-Codified in [[CLAUDE]]:
-- Obsidian-flavor `[[wikilinks]]` (slug-only, since Obsidian resolves filenames across the vault).
+Codified in [CLAUDE](../../CLAUDE.md):
+- Standard markdown `[slug](relative/path.md)` cross-references. Filenames are globally unique, so link text is always the slug; the path is whatever's relative from the writing file. Renders correctly on both Obsidian and GitHub.
 - YAML frontmatter on every page (`type`, `title`, `added`, `updated`, `sources`, `tags`).
 - Directory split: `sources/`, `entities/`, `concepts/`, `comparisons/`, plus top-level `index.md`, `log.md`, `overview.md`. Lazy directory creation.
 - One-at-a-time ingest workflow with human-in-the-loop discussion before mass writes.
@@ -54,4 +54,4 @@ None — methodology source, not domain content. No entity or concept pages crea
 
 - Tooling tips not adopted yet (revisit when relevant): [qmd](https://github.com/tobi/qmd) for hybrid BM25/vector search if the wiki outgrows the index file; Obsidian image-download hotkey; Marp slides; Dataview queries.
 - This wiki is **not yet a git repo** (system reports the directory isn't under git). The pattern recommends git for free version history — worth raising with the human as the wiki accumulates content.
-- The schema in [[CLAUDE]] is meant to be co-evolved. Update it whenever conventions change, rather than letting practice drift from the documented pattern.
+- The schema in [CLAUDE](../../CLAUDE.md) is meant to be co-evolved. Update it whenever conventions change, rather than letting practice drift from the documented pattern.

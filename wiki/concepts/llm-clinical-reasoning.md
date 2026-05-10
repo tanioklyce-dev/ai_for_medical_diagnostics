@@ -3,13 +3,13 @@ type: concept
 title: LLM clinical reasoning
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [task/diagnosis, evaluation/benchmark, model-family/llm, model-family/foundation-model]
 ---
 
 # LLM clinical reasoning
 
-Recent reasoning-tuned LLMs (OpenAI o1-preview, o3, etc.) have **surpassed practicing physicians on benchmark clinical reasoning cases**. Whether this translates to better real-world outcomes is the open question, and depending on how it's posed it touches the heart of [[clinical-validation]].
+Recent reasoning-tuned LLMs (OpenAI o1-preview, o3, etc.) have **surpassed practicing physicians on benchmark clinical reasoning cases**. Whether this translates to better real-world outcomes is the open question, and depending on how it's posed it touches the heart of [clinical-validation](clinical-validation.md).
 
 ## Brodeur et al. (2025) — the headline study
 
@@ -40,11 +40,11 @@ o1-preview produced "exact / very close" diagnoses in **67%–83%** of cases acr
 ### The author's caveat
 > "These results suggest that current LLMs have surpassed most existing clinical reasoning benchmarks, but they reflect isolated cognitive evaluations rather than real-world clinical integration. Whether AI-assisted reasoning translates to improved patient outcomes remains an open question requiring prospective trials."
 
-This is the load-bearing caveat. The benchmarks are *case-bench style*, similar to what the [[arise-network]] *State of Clinical AI* report flagged as evidence-thin.
+This is the load-bearing caveat. The benchmarks are *case-bench style*, similar to what the [arise-network](../entities/arise-network.md) *State of Clinical AI* report flagged as evidence-thin.
 
 ## Multi-agent gains over single-agent baselines
 
-Across published benchmark evaluations (Gorenshtein et al., Zheng et al., Liu et al., 2025), multi-agent frameworks showed diagnostic accuracy gains of **7% to over 60%** vs. single-agent baselines, depending on case complexity. The flagship example is **Microsoft's [[mai-dxo]]** paired with OpenAI o3 — see that page for the comparable NEJM-case figure (85.5% vs. ~20% for 21 experienced physicians).
+Across published benchmark evaluations (Gorenshtein et al., Zheng et al., Liu et al., 2025), multi-agent frameworks showed diagnostic accuracy gains of **7% to over 60%** vs. single-agent baselines, depending on case complexity. The flagship example is **Microsoft's [mai-dxo](../entities/mai-dxo.md)** paired with OpenAI o3 — see that page for the comparable NEJM-case figure (85.5% vs. ~20% for 21 experienced physicians).
 
 ## More deployment-realistic benchmarks
 
@@ -58,7 +58,7 @@ The takeaway: capabilities far outrun the validated evidence base, and as benchm
 ## What the benchmarks miss
 
 - **Calibration**: high accuracy on selected cases doesn't speak to whether the model expresses appropriate uncertainty.
-- **Belief vs. fact**: the [[ai-hallucination-medical]] / KaBLE finding — GPT-4o's accuracy collapses from 98.2% to 64.4% when a false claim is framed as the user's first-person belief — is a directly diagnostic-relevant failure mode that case-style benchmarks don't capture.
+- **Belief vs. fact**: the [ai-hallucination-medical](ai-hallucination-medical.md) / KaBLE finding — GPT-4o's accuracy collapses from 98.2% to 64.4% when a false claim is framed as the user's first-person belief — is a directly diagnostic-relevant failure mode that case-style benchmarks don't capture.
 - **Workflow integration**: clinical reasoning is interleaved with EHR navigation, ordering, prior-authorization paperwork, family communication — none of which appear in NEJM-style cases.
 - **Liability and accountability**: who is responsible if an LLM-recommended diagnosis is wrong?
 
@@ -69,10 +69,10 @@ The takeaway: capabilities far outrun the validated evidence base, and as benchm
 - How do reasoning models behave on non-Western, non-English, or rare-disease cases not well represented in their training?
 
 ## Related
-- [[mai-dxo]] — Microsoft's multi-agent diagnostic system, the leading entity in this space.
-- [[agentic-clinical-ai]] — the broader category.
-- [[clinical-validation]] — the evidence-base context.
-- [[ai-hallucination-medical]] — the under-addressed failure mode.
+- [mai-dxo](../entities/mai-dxo.md) — Microsoft's multi-agent diagnostic system, the leading entity in this space.
+- [agentic-clinical-ai](agentic-clinical-ai.md) — the broader category.
+- [clinical-validation](clinical-validation.md) — the evidence-base context.
+- [ai-hallucination-medical](ai-hallucination-medical.md) — the under-addressed failure mode.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2 highlight box on LLM Clinical Reasoning, p. 272; AI Agents box p. 272–273)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 highlight box on LLM Clinical Reasoning, p. 272; AI Agents box p. 272–273)

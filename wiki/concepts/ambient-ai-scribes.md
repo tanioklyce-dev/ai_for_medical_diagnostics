@@ -3,7 +3,7 @@ type: concept
 title: Ambient AI scribes
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [deployment, task/documentation, evaluation/prospective-trial, workflow]
 ---
 
@@ -13,11 +13,11 @@ Tools that **automatically generate clinical documentation from patient–clinic
 
 ## Why this category matters
 
-The 2026 AI Index treats ambient scribes as the canonical example of *narrow tools operating in constrained workflows under clinician oversight* — see [[clinical-validation]]. Unlike open-ended diagnostic LLMs, scribes do one task, with a human review step, and their outputs sit in a structured EHR slot. The evidence base reflects that: multiple multi-site outcomes papers in 2025, with consistent results across institutions.
+The 2026 AI Index treats ambient scribes as the canonical example of *narrow tools operating in constrained workflows under clinician oversight* — see [clinical-validation](clinical-validation.md). Unlike open-ended diagnostic LLMs, scribes do one task, with a human review step, and their outputs sit in a structured EHR slot. The evidence base reflects that: multiple multi-site outcomes papers in 2025, with consistent results across institutions.
 
 ## Adoption (2025)
 
-- **[[abridge]]** — leading platform — expanded from ~100 to **150+ health systems**.
+- **[abridge](../entities/abridge.md)** — leading platform — expanded from ~100 to **150+ health systems**.
 - **Kaiser Permanente** — deployed across **40 hospitals and 600+ medical offices** (Abridge).
 - **63% adoption** among hospitals using Epic's EHR system.
 
@@ -35,14 +35,14 @@ The Sharp HealthCare RVU finding is especially notable — it directly translate
 
 ## Why scribes "work" while open-ended LLMs raise concerns
 
-The AI Index draws an explicit contrast in section 6.2 (p. 278). Findings about general-purpose LLM hazards (NOHARM benchmark: 11.8–14.6 severely harmful recommendations per 100 cases; see [[ai-hallucination-medical]]) apply to **open-ended clinical reasoning tasks**, not narrow workflow-embedded tools. Scribes share several risk-mitigating properties:
+The AI Index draws an explicit contrast in section 6.2 (p. 278). Findings about general-purpose LLM hazards (NOHARM benchmark: 11.8–14.6 severely harmful recommendations per 100 cases; see [ai-hallucination-medical](ai-hallucination-medical.md)) apply to **open-ended clinical reasoning tasks**, not narrow workflow-embedded tools. Scribes share several risk-mitigating properties:
 
 - **Constrained workflow**: input scope is the live patient encounter; output scope is the documentation field.
 - **Clinician oversight**: physician reviews and signs the note before it enters the chart.
 - **Low-stakes per-output**: documentation errors are caught downstream; not directly diagnostic.
 - **Verifiable comparison**: clinicians can compare AI-generated note vs. their own recollection.
 
-These properties don't generalize cleanly to other clinical AI categories — see [[llm-clinical-reasoning]] and [[agentic-clinical-ai]] for the more contested deployment terrain.
+These properties don't generalize cleanly to other clinical AI categories — see [llm-clinical-reasoning](llm-clinical-reasoning.md) and [agentic-clinical-ai](agentic-clinical-ai.md) for the more contested deployment terrain.
 
 ## Adjacent generative-AI clinical workflow tools
 
@@ -59,4 +59,4 @@ Briefly mentioned in the same section:
 - Vendor concentration — Abridge dominance, plus DAX (Microsoft/Nuance), Suki, Ambience, Heidi, etc. — what's the differentiation, and where does FDA oversight land if/when scribes start nudging clinical decisions?
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2, p. 276–278; Mello framework p. 282)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 276–278; Mello framework p. 282)

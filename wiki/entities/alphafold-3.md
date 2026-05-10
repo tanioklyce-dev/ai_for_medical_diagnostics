@@ -3,7 +3,7 @@ type: entity
 title: AlphaFold 3
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [model-family/foundation-model, biomedical-ai/structure-prediction, organization/google-deepmind]
 ---
 
@@ -40,7 +40,7 @@ FoldBench is a benchmark that tests whether a model can correctly predict how a 
 | RosettaFold-3 | 730M | 57.28% |
 | SeedFold | 923M | 63.10% |
 
-**Bigger models have not surpassed AlphaFold 3's 64.9%** — see [[cofolding-models]] for the data-not-scale-bottleneck framing.
+**Bigger models have not surpassed AlphaFold 3's 64.9%** — see [cofolding-models](../concepts/cofolding-models.md) for the data-not-scale-bottleneck framing.
 
 ## Training data (per AI Index Figure 6.1.6¹)
 
@@ -66,7 +66,7 @@ Multiple cofolding models in 2025 were inspired by AlphaFold 3's architecture, s
 
 ## Where AlphaFold 3 fits in diagnostics
 
-Like [[evo-2]], AlphaFold 3 is upstream of clinical diagnostics rather than a diagnostic tool itself. Its diagnostic-relevant impact comes through:
+Like [evo-2](evo-2.md), AlphaFold 3 is upstream of clinical diagnostics rather than a diagnostic tool itself. Its diagnostic-relevant impact comes through:
 - **Drug discovery** → companion biomarkers → diagnostic test development.
 - **Target validation** in rare disease.
 - **In silico binding prediction** for therapeutic stratification.
@@ -78,9 +78,9 @@ Like [[evo-2]], AlphaFold 3 is upstream of clinical diagnostics rather than a di
 - How does AlphaFold 3's restricted license interact with academic medical-center research and downstream commercial diagnostic development?
 
 ## Related
-- [[cofolding-models]] — the broader model family.
-- [[protein-language-models]] — sequence-side complement.
-- [[ai-index-2026]] — primary source.
+- [cofolding-models](../concepts/cofolding-models.md) — the broader model family.
+- [protein-language-models](../concepts/protein-language-models.md) — sequence-side complement.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.1 Structure Prediction and Cofolding Models, p. 262–264)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.1 Structure Prediction and Cofolding Models, p. 262–264)

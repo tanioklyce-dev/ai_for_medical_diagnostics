@@ -3,7 +3,7 @@ type: concept
 title: Digital twins in medicine
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [task/prognosis, task/treatment-planning, deployment, evaluation/prospective-trial]
 ---
 
@@ -50,7 +50,7 @@ The publication and patent curves match a hype-cycle rise, but rigorous studies 
 | **ACTOv** phase II RCT (n=80) | Ovarian cancer | Adaptive therapy with digital twin–guided dosing. |
 | Prostate cancer pilot | Prostate cancer | Adaptive therapy using digital twins concluded 2025; significantly increased survival (Zhang et al., 2022 baseline). |
 
-The Twin Health diabetes RCT is the strongest result: it's an RCT with a clinically meaningful primary endpoint (HbA1c control with medication reduction) — exactly the kind of evidence the [[arise-network]] *State of Clinical AI Report* says is missing for most clinical AI.
+The Twin Health diabetes RCT is the strongest result: it's an RCT with a clinically meaningful primary endpoint (HbA1c control with medication reduction) — exactly the kind of evidence the [arise-network](../entities/arise-network.md) *State of Clinical AI Report* says is missing for most clinical AI.
 
 ## Where digital twins fit in diagnostics specifically
 
@@ -63,13 +63,13 @@ This is mostly a **treatment-optimization** tool category, not a diagnostic one.
 
 - **Definition convergence** — the NASEM criteria are restrictive; most "digital twin" work fails them. Will the field tighten its terminology, or will the term keep diluting?
 - **Data infrastructure** — true dynamic updating requires continuous data streams (wearables, EHRs, labs). Few institutions have this in production.
-- **Regulatory framework** — adaptive twin-driven dosing changes what's "the device." How does FDA's [[fda-510k-pathway]] / PCCP framework adapt?
+- **Regulatory framework** — adaptive twin-driven dosing changes what's "the device." How does FDA's [fda-510k-pathway](fda-510k-pathway.md) / PCCP framework adapt?
 - **Equity** — twin models trained on well-monitored patients may underperform for under-monitored populations (raised in Ch. 6.4 ethics framing).
 
 ## Related
-- [[clinical-validation]] — twins are an extreme test case of the validation gap.
-- [[medical-imaging-ai]] — many twins ingest imaging features.
-- [[ai-index-2026]] — primary source.
+- [clinical-validation](clinical-validation.md) — twins are an extreme test case of the validation gap.
+- [medical-imaging-ai](medical-imaging-ai.md) — many twins ingest imaging features.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2 Digital Twins highlight box, p. 278–279)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 Digital Twins highlight box, p. 278–279)

@@ -3,7 +3,7 @@ type: concept
 title: Agentic clinical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [task/diagnosis, model-family/llm, evaluation/benchmark, deployment]
 ---
 
@@ -17,11 +17,11 @@ Conventional AI models generate predictions or classifications **in isolation**.
 
 ## Headline results
 
-### [[mai-dxo]] + OpenAI o3 on NEJM cases
+### [mai-dxo](../entities/mai-dxo.md) + OpenAI o3 on NEJM cases
 - **85.5%** accuracy on diagnostically challenging cases drawn from the New England Journal of Medicine.
 - **~20%** for 21 practicing physicians with 5–20 years of clinical experience working under comparable conditions (no AI tools).
 
-This is the signature 2025 result for clinical agentic AI — see [[mai-dxo]] for full detail.
+This is the signature 2025 result for clinical agentic AI — see [mai-dxo](../entities/mai-dxo.md) for full detail.
 
 ### Multi-agent gains over single-agent baselines
 Across published benchmarks, multi-agent frameworks showed gains of **7% to over 60%** in diagnostic accuracy vs. single-agent baselines (Gorenshtein et al., Zheng et al., Liu et al., 2025). The mechanism: assigning specialized roles (diagnostician, pharmacist, etc.) and coordinating through structured reasoning protocols.
@@ -56,10 +56,10 @@ These systems are early-stage but represent a coordination pattern that may even
 The Responsible AI chapter notes (Ch. 3.3) that across surveyed organizations, **security and risk concerns (62%) are the top barrier to scaling agentic AI**, ahead of technical limitations (38%) and regulatory uncertainty (38%).
 
 ## Related
-- [[mai-dxo]] — flagship clinical agentic system.
-- [[llm-clinical-reasoning]] — single-LLM reasoning baseline.
-- [[clinical-validation]] — the evidence-rigor context.
-- [[ai-hallucination-medical]] — failure modes that compound across multi-step reasoning.
+- [mai-dxo](../entities/mai-dxo.md) — flagship clinical agentic system.
+- [llm-clinical-reasoning](llm-clinical-reasoning.md) — single-LLM reasoning baseline.
+- [clinical-validation](clinical-validation.md) — the evidence-rigor context.
+- [ai-hallucination-medical](ai-hallucination-medical.md) — failure modes that compound across multi-step reasoning.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.2 highlight box on AI Agents in Clinical Medicine, p. 272–273; Ch. 6.1 highlight on Automated and Agentic Biomedical Discovery, p. 268; Ch. 3.3 on agentic AI scaling barriers, p. 145)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 highlight box on AI Agents in Clinical Medicine, p. 272–273; Ch. 6.1 highlight on Automated and Agentic Biomedical Discovery, p. 268; Ch. 3.3 on agentic AI scaling barriers, p. 145)

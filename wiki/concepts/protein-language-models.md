@@ -3,13 +3,13 @@ type: concept
 title: Protein language models (PLMs)
 added: 2026-05-10
 updated: 2026-05-10
-sources: [[[ai-index-2026]]]
+sources: [../sources/ai-index-2026.md]
 tags: [model-family/foundation-model, biomedical-ai/protein, evaluation/benchmark]
 ---
 
 # Protein language models (PLMs)
 
-Foundation models trained on protein sequence data, used for fitness prediction, function annotation, structure prediction (in concert with [[cofolding-models]]), and protein design. The 2025 inflection point: **a shift from scaling to specialization**, with smaller curated models beating larger generalist ones.
+Foundation models trained on protein sequence data, used for fitness prediction, function annotation, structure prediction (in concert with [cofolding-models](cofolding-models.md)), and protein design. The 2025 inflection point: **a shift from scaling to specialization**, with smaller curated models beating larger generalist ones.
 
 ## The 2025 shift
 
@@ -55,7 +55,7 @@ Beyond ProteinGym, evidence is accumulating that:
 Sequence → Structure → Function → Design
 
 - **PLMs** handle the sequence side and link to function prediction.
-- **[[cofolding-models]]** (AlphaFold 3 lineage) handle structure with mixed inputs.
+- **[cofolding-models](cofolding-models.md)** (AlphaFold 3 lineage) handle structure with mixed inputs.
 - **Generative protein design**: BindCraft, Germinal (workflow-based), RFDiffusion, BoltzGen (directly trained for binders).
 
 ## Adaptyv Bio Nipah Binder Challenge (2025)
@@ -70,14 +70,14 @@ The takeaway: pure generative methods produce expressible designs, but functiona
 
 ## Open questions
 
-- How do PLMs compose with [[cofolding-models]] in end-to-end design pipelines?
+- How do PLMs compose with [cofolding-models](cofolding-models.md) in end-to-end design pipelines?
 - What's the data-quality vs. data-scale tradeoff for the next generation?
 - Where does the field land on permissively-licensed open weights vs. commercial closure?
 
 ## Related
-- [[cofolding-models]] — structure-prediction sibling.
-- [[evo-2]] — DNA/genomic-scale analog.
-- [[ai-index-2026]] — primary source.
+- [cofolding-models](cofolding-models.md) — structure-prediction sibling.
+- [evo-2](../entities/evo-2.md) — DNA/genomic-scale analog.
+- [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
-- [[ai-index-2026]] (Ch. 6.1, p. 261–262, 265)
+- [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.1, p. 261–262, 265)
