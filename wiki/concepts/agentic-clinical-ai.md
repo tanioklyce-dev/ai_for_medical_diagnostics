@@ -3,7 +3,7 @@ type: concept
 title: Agentic clinical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md]
 tags: [task/diagnosis, model-family/llm, evaluation/benchmark, deployment]
 ---
 
@@ -80,10 +80,21 @@ The Responsible AI chapter notes (Ch. 3.3) that across surveyed organizations, *
 - [clinical-validation](clinical-validation.md) — the evidence-rigor context.
 - [ai-hallucination-medical](ai-hallucination-medical.md) — failure modes that compound across multi-step reasoning.
 
+## Chain of Debate as an architectural pattern
+
+The MAI-DxO primary paper ([mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md)) names the pattern: **Chain of Debate**. A single base LLM role-plays multiple specialized agents (Dr. Hypothesis, Dr. Test-Chooser, Dr. Challenger, Dr. Stewardship, Dr. Checklist) that deliberate before each action. This is the LLM-era realization of normative Bayesian-decision-theory frameworks for diagnostic reasoning (Pathfinder, 1992; Horvitz time-critical-action, 1997) — see [eric-horvitz](../entities/eric-horvitz.md). Three design choices the paper highlights as critical:
+
+- **Explicit hypothesis tracking** (Dr. Hypothesis) — maintains a probability-ranked differential rather than implicit attention.
+- **Adversarial challenge** (Dr. Challenger) — directly counters anchoring, a major LLM failure mode.
+- **Cost stewardship** (Dr. Stewardship) — separates "what would be useful" from "what's affordable enough to justify."
+
+The MAC framework (Chen npj Digital Medicine Mar 2025) confirms the **supervising-coordination role is what makes multi-agent systems work** — assigning specialist personas alone is not enough. Process > cosplay.
+
 ## Multi-agent safety advantage
 
 [noharm](noharm.md) shows that **three-agent "advisor + guardian" LLM systems** have ~6× higher odds of top-quartile clinical safety vs solo models. Multi-agent architectures aren't just an accuracy win — they're a measurable safety win on the severe-harm axis. This may turn out to be the most-deployment-relevant finding in the multi-agent story.
 
 ## Sources
+- [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md) — primary for MAI-DxO architecture and the Chain of Debate pattern.
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Foundational Methods section, slides 45–48)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 highlight box on AI Agents in Clinical Medicine, p. 272–273; Ch. 6.1 highlight on Automated and Agentic Biomedical Discovery, p. 268; Ch. 3.3 on agentic AI scaling barriers, p. 145)

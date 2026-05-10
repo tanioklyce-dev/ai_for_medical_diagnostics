@@ -3,7 +3,7 @@ type: concept
 title: LLM clinical reasoning
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md]
 tags: [task/diagnosis, evaluation/benchmark, model-family/llm, model-family/foundation-model]
 ---
 
@@ -92,6 +92,27 @@ The takeaway: capabilities far outrun the validated evidence base, and as benchm
 - [clinical-validation](clinical-validation.md) — the evidence-base context.
 - [ai-hallucination-medical](ai-hallucination-medical.md) — the under-addressed failure mode.
 
+## Single-LLM baseline numbers from the MAI-DxO paper
+
+The MAI-DxO primary paper ([mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md)) provides clean single-LLM baselines on the [sdbench](sdbench.md) sequential-diagnosis benchmark — useful as 2025 reference points:
+
+| Off-the-shelf model (baseline prompt) | Accuracy on 304 NEJM CPCs | Cost per case |
+|---|---|---|
+| OpenAI o3 | 78.6% | $7,850 |
+| Gemini 2.5 Pro | 68.8% | ~$4,500 |
+| Claude 4 Opus | 68.4% | ~$5,500 |
+| o4-mini | 69.4% | ~$5,800 |
+| GPT-4.1 | 61.8% | ~$3,000 |
+| Grok-3 | 59.9% | ~$3,500 |
+| Llama 4 Maverick | 53.6% | ~$3,500 |
+| GPT-4o | 49.3% | $2,745 |
+| DeepSeek-R1 | 47.4% | ~$3,000 |
+| GPT-3.5-turbo | ~25% | <$1,000 |
+| **21 physicians (unaided)** | **19.9%** | $2,963 |
+
+Note: physicians were **explicitly forbidden** from external resources (no search, no LLMs, no EHR) to prevent them from looking up online NEJM cases. The 19.9% is a constrained floor, not deployment-realistic. (See [clinical-validation](clinical-validation.md) for the methodological note.) That said, even the *highest-performing individual physician at 41%* was beaten by GPT-4o on both accuracy and cost.
+
 ## Sources
+- [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md) — primary for single-LLM and orchestrated-LLM baselines on NEJM CPC sequential diagnosis.
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Model Performance and Clinical Workflows sections — primary citation chain)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 highlight box on LLM Clinical Reasoning, p. 272; AI Agents box p. 272–273)

@@ -12,6 +12,7 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 
 ## Sources
 - [arise-state-of-clinical-ai-2026](sources/arise-state-of-clinical-ai-2026.md) — ARISE Network, *State of Clinical AI Report 2026* (Jan 2026, 130-slide deck). Primary citation chain for most clinical-AI claims; spine of the wiki.
+- [mai-dxo-sequential-diagnosis-2025](sources/mai-dxo-sequential-diagnosis-2025.md) — Microsoft AI, *Sequential Diagnosis with Language Models* (Nori, Horvitz et al., ArXiv 2506.22405, Jul 2025). Primary for MAI-DxO orchestrator and SDBench methodology.
 - [ai-index-2026](sources/ai-index-2026.md) — Stanford HAI, AI Index Report 2026 (April 2026, 425 pp). First edition with standalone Medicine and Science chapters.
 - [llm-wiki](sources/llm-wiki.md) — meta-document describing the LLM-wiki pattern this project uses *(methodology, not domain content)*
 
@@ -29,6 +30,7 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [healthbench](concepts/healthbench.md) — OpenAI; 5,000 conversations × 262 physicians × 60 countries × 48,562 rubric criteria; GPT-3.5 16% → o3 60%
 - [medhelm](concepts/medhelm.md) — Stanford 35-benchmark suite; 12 use real EHR data; LLMs strongest on documentation, weakest on admin/workflow
 - [medagentbench](concepts/medagentbench.md) — Stanford FHIR-EHR benchmark; 300 query+action tasks; Claude 3.5 Sonnet 70% (queries 85%, actions 54%)
+- [sdbench](concepts/sdbench.md) — Microsoft AI Sequential Diagnosis Benchmark; 304 NEJM CPCs as stepwise encounters; Gatekeeper + synthetic findings + Judge methodology
 - [protein-language-models](concepts/protein-language-models.md) — 2025 shift from scaling (ESM3) to specialization (MSAPairformer); ProteinGym
 - [cofolding-models](concepts/cofolding-models.md) — AlphaFold 3 lineage; FoldBench; data-not-scale bottleneck; commercially permissive open replications
 - [digital-twins-medicine](concepts/digital-twins-medicine.md) — NASEM definition (only 12.1% of studies satisfy); Twin Health diabetes RCT
@@ -44,6 +46,7 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [abridge](entities/abridge.md) — leading ambient AI scribe platform; 150+ health systems; multi-site outcomes
 - [trews](entities/trews.md) — Targeted Real-time Early Warning System (Johns Hopkins/Bayesian Health); 18.7% sepsis mortality reduction across 13 Cleveland Clinic hospitals
 - [arise-network](entities/arise-network.md) — Stanford-Harvard meta-evaluator; publishes *State of Clinical AI Report* and maintains [noharm](concepts/noharm.md) benchmark
+- [eric-horvitz](entities/eric-horvitz.md) — Microsoft CSO and connecting figure across MAI-DxO, ARISE, collaborative-AI design, and foundational Bayesian-decision-theory diagnostic-AI work back to Pathfinder (1992)
 - [evo-2](entities/evo-2.md) — 40B-param genomic foundation model (Arc Institute); outperformed by 200M GPN-Star on variant effect
 - [alphafold-3](entities/alphafold-3.md) — Google DeepMind cofolding flagship; 64.9% on FoldBench, still leading
 
@@ -51,7 +54,6 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 *(none yet — created when query results are filed back)*
 
 ## Awaiting ingest (in `raw/`)
-- `raw/2506.22405v2.pdf` — MAI-DxO / *Sequential Diagnosis with Language Models* (Nori, Horvitz et al. 2025) — to be downloaded as the second source in this batch.
 - `raw/clinpract-15-00169.pdf` — Ogut MDPI *Clinics and Practice* Sept 2025, AI in clinical medicine review across 5 domains. On-topic, queued.
 - `raw/claudes-constitution_webPDF_26-02.02a.pdf` — Anthropic, Claude's Constitution *(relevance to medical diagnostics: indirect; deployment-safety / refusal behavior in clinical contexts)*
 - `raw/1426.pdf`, `raw/2749.pdf` — 1984/1994 corneal-topography papers; out of wiki scope.

@@ -3,7 +3,7 @@ type: overview
 title: AI for Medical Diagnostics — Overview
 added: 2026-05-10
 updated: 2026-05-10
-sources: [sources/ai-index-2026.md, sources/arise-state-of-clinical-ai-2026.md]
+sources: [sources/ai-index-2026.md, sources/arise-state-of-clinical-ai-2026.md, sources/mai-dxo-sequential-diagnosis-2025.md]
 tags: [overview]
 ---
 
@@ -68,8 +68,7 @@ The field is bifurcating along this evidence axis:
 > The 2026 state of the field is **two-track, with a third emerging**. (1) Narrow tools, clinician-in-loop, well-defined workflows — the strong-evidence track (ambient scribes, mammography AI, stroke imaging, sepsis prediction, ophthalmology copilots). (2) Open-ended LLM reasoning — strong benchmark numbers, dangerous failure modes (NOHARM, MetaMedQA, CRAFT-MD), thin prospective evidence. (3) **LLM-as-copilot in real care** — emerging, with the Penda Health Kenya deployment as the first large-N prospective example (39,849 visits, 16% diagnostic-error reduction). The deployed-LLM-copilot category may collapse the "narrow vs. open" split as it matures. Bridging the gap depends on: better benchmarks ([healthbench](concepts/healthbench.md), [medhelm](concepts/medhelm.md), [medagentbench](concepts/medagentbench.md), [noharm](concepts/noharm.md)); workflow design (the optimization paradox is a sober warning); regulatory iteration (PCCPs under the [fda-510k-pathway](concepts/fda-510k-pathway.md)); and clinician training to manage [automation-bias-medical-ai](concepts/automation-bias-medical-ai.md) and [ai-deskilling](concepts/ai-deskilling.md). Multi-agent **safety** (NOHARM advisor + guardian, ~6× safer) may be a more important deployment-relevant property than multi-agent **accuracy**.
 
 ## Sources awaiting ingest in `raw/`
-- `raw/2506.22405v2.pdf` (MAI-DxO primary, *Sequential Diagnosis with Language Models*, Nori, Horvitz et al. 2025) — to be downloaded next (in progress alongside this ingest).
-- `raw/clinpract-15-00169.pdf` — Ogut MDPI *Clinics and Practice* Sept 2025, AI in clinical medicine review across 5 domains. On-topic, queued behind ARISE/MAI-DxO.
+- `raw/clinpract-15-00169.pdf` — Ogut MDPI *Clinics and Practice* Sept 2025, AI in clinical medicine review across 5 domains. On-topic, queued.
 - `raw/claudes-constitution_webPDF_26-02.02a.pdf` — Anthropic, Claude's Constitution. Methodology/model-behavior document; relevance to medical diagnostics is indirect (deployment-safety, refusal behavior in clinical contexts) — TBD on ingest.
 
 ## Open questions to drive sourcing

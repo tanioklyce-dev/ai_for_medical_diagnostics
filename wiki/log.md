@@ -49,3 +49,21 @@ Source: `raw/arise_state_of_clinical_ai_2026.pdf` (130 slides, January 2026, ARI
 - The "fundamental theorem of medical informatics" (human + AI > each alone) does *not* always hold — Goh/Chen GPT-4 RCT shows physicians + GPT-4 ≈ GPT-4 alone. Workflow design matters.
 - Penda Health AI Consult: first prospective LLM-copilot deployment in real care (39,849 visits, 16% diagnostic-error reduction).
 - Two new deployment-safety concerns now have hard 2025 evidence: [automation-bias-medical-ai](concepts/automation-bias-medical-ai.md) (Qazi 85% → 73%) and [ai-deskilling](concepts/ai-deskilling.md) (Budzyn ADR 28% → 22%).
+
+## [2026-05-10] ingest | Sequential Diagnosis with Language Models (MAI-DxO primary)
+Source: `raw/mai_dxo_sequential_diagnosis_2025.pdf` (31 pp, ArXiv 2506.22405v2, Nori, Daswani, ..., Horvitz et al., Microsoft AI, Jul 2025). URL: <https://arxiv.org/abs/2506.22405>. Filed as [mai-dxo-sequential-diagnosis-2025](sources/mai-dxo-sequential-diagnosis-2025.md).
+**Read scope**: full paper (31 pages: abstract, intro, SDBench methodology, MAI-DxO architecture, physician comparison, results across 10 base models, discussion, limitations, references, appendices).
+**Pages created (3)**:
+- Source page: [mai-dxo-sequential-diagnosis-2025](sources/mai-dxo-sequential-diagnosis-2025.md)
+- Concept: [sdbench](concepts/sdbench.md) — separates the benchmark methodology (Gatekeeper + synthetic findings + Judge rubric) from the orchestrator
+- Entity: [eric-horvitz](entities/eric-horvitz.md) — load-bearing connecting figure across MAI-DxO, ARISE, collaborative-AI work, and foundational Bayesian decision theory dating to Pathfinder (1992)
+**Pages updated (4)**: [mai-dxo](entities/mai-dxo.md) (major rewrite — full 5-agent architecture, 5 configuration variants, +11pp boost across 10 models, Cohen's κ validity, stated limitations), [agentic-clinical-ai](concepts/agentic-clinical-ai.md) (Chain of Debate pattern, supervising-coordination role from MAC framework), [llm-clinical-reasoning](concepts/llm-clinical-reasoning.md) (single-LLM baseline table on SDBench), [clinical-validation](concepts/clinical-validation.md) (SDBench as middle-layer methodology; explicit note about physicians-forbidden-from-resources constraint in case-bench studies).
+**Citation precedence**: this is now the **primary** for MAI-DxO claims. ARISE and AI Index are secondary on MAI-DxO specifics.
+**Notable findings (beyond what ARISE summarized)**:
+- Architectural specificity: five named virtual physicians (Hypothesis, Test-Chooser, Challenger, Stewardship, Checklist) deliberating via "Chain of Debate." Confirms Bayesian-decision-theory lineage back to Horvitz's 1980s–90s work.
+- +11pp average accuracy gain across 10 base models (Claude 4 Sonnet/Opus, Gemini 2.5 Flash/Pro, GPT-4.1, o3, o4-mini, Grok-3, Llama 4 Maverick, DeepSeek-R1). All gains *p* < 0.005.
+- Cohen's κ = 0.70 Judge-vs-physician (vs 0.87 human-vs-human). Physicians judged Judge "overly strict" in 4 of 5 disagreements — true accuracy likely slightly higher than reported.
+- Held-out test set methodology (56 most recent cases 2024–2025) shows gains robust against memorization.
+- The "instructive case" (hand-sanitizer alcohol withdrawal): off-shelf o3 fixated on antibiotic toxicity, MAI-DxO's Dr. Hypothesis flagged toxin exposures in round 1, panel asked about hand sanitizer → correct diagnosis at $795 vs o3's wrong diagnosis at $3,431. *This is the qualitative mechanism the architecture buys you.*
+- Physicians were **explicitly forbidden** from external resources (search, LLMs, EHR, colleagues). The paper acknowledges in Sec 5.3 this is "not reflective of real clinical practice." The 19.9% physician baseline is a constrained floor.
+- SDBench may matter beyond MAI-DxO: methodology is reusable, and the paper explicitly states intent to submit for peer review and explore public release.

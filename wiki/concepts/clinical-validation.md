@@ -3,7 +3,7 @@ type: concept
 title: Clinical validation of medical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md]
 tags: [evaluation, governance, prospective-trial, evidence]
 ---
 
@@ -73,6 +73,18 @@ The growth from 417 (2024) → 536 (2025) prospective imaging trial papers is a 
 - Where are the dark spots — specialties with high adoption but minimal prospective evidence (e.g., parts of radiology, pathology)?
 - What's the calibration story? AI may achieve high AUC but be poorly calibrated, leading to over/under-treatment downstream.
 
+## Sequential-diagnosis as a middle layer between vignette and trial
+
+The MAI-DxO paper ([mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md)) introduces [sdbench](sdbench.md), a benchmark methodology that occupies a useful middle ground in the validation hierarchy: more realistic than static MCQ vignettes, less realistic than prospective deployment trials. Its three methodological contributions are worth knowing as the **emerging standard for case-bench-style evaluation in 2025–26**:
+
+- **Gatekeeper agent** — holds the full case file but reveals findings only when explicitly queried, refusing diagnostic interpretations and disclosing pathognomonic results only when the exact confirmatory test is requested.
+- **Synthetic findings** — for queries not in the original published case, the Gatekeeper returns numerically/descriptively consistent synthetic results so models can pursue alternative diagnostic paths without leakage hints. Physician panel validated: of 508 responses reviewed, only 8 flagged, 0 leaked the diagnosis.
+- **LLM Judge with physician-authored rubric** — 5-point Likert (≥4 = correct), Cohen's κ = 0.70 vs physician adjudication (vs human-vs-human κ = 0.87).
+
+These design patterns are likely to propagate; expect future clinical-AI benchmarks to follow similar templates.
+
+**Important methodological note from the paper itself**: when physicians are recruited as the human comparator on case-bench evaluations of publicly-available cases (like NEJM), they are typically **forbidden from external resources** (search engines, LLMs, EHR access, colleagues) to prevent them from looking up the answer. The MAI-DxO paper acknowledges in Section 5.3 that this is *"not reflective of real clinical practice."* The implication for any "AI beats physicians 4×" headline: the human floor is artificial, not deployment-realistic. *This is the right way to do the case-bench experiment, but the result needs to be read accordingly.*
+
 ## Cross-cutting deployment concerns
 
 [ARISE 2026](../sources/arise-state-of-clinical-ai-2026.md) adds two failure modes for clinician–AI teaming that complicate "validation" itself:
@@ -84,4 +96,5 @@ Implication: a successful prospective trial of AI-assisted care does not by itse
 
 ## Sources
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (slides 5, 32, 70–72, throughout)
+- [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md) (Sections 2, 3.3, 5.3 — SDBench methodology and constrained-physician note)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6, p. 271, 273, 278, including ARISE box)
