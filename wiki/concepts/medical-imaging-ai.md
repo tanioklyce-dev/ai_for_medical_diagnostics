@@ -3,7 +3,7 @@ type: concept
 title: Medical imaging AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [modality/radiology, modality/pathology, modality/cardiology, modality/ophthalmology, task/detection, task/classification, task/segmentation, evaluation/external-validation]
 ---
 
@@ -47,6 +47,20 @@ Early efforts to fix this in 2025:
 
 **Human-centered evaluation** (clinicians manually reviewing model outputs) is becoming more common in publications and provides stronger evidence of clinical utility than purely lexical metrics.
 
+## 2025 prospective imaging RCTs (primary citations from ARISE 2026)
+
+[ARISE 2026](../sources/arise-state-of-clinical-ai-2026.md) gives us per-paper detail on the 2025 prospective imaging cohort:
+
+- **Vara MG mammography** (Eisemann, Katalinic et al. *Nature Medicine* Jan 2025) — Germany, 12 sites, 463,094 women (260,739 with AI). BCDR **6.7 vs 5.7 per 1,000** (17.6% increase, CI 5.7–30.8%); recall rate slightly *lower* (37.4 vs 38.3 per 1,000). 204 cancers caught via "safety-net" alerts (many DCIS). Stronger PPV for both recall and biopsy. The cleanest "AI improves screening without false-alarm tax" data point in 2025.
+- **Brainomix 360 stroke** (Nagaratnam, Harston et al. *The Lancet* Dec 2025) — England NHS, 26 hospitals, longitudinal evaluation. EVT (endovascular thrombectomy) increased **2.3% → 4.6%** at AI sites vs **1.6% → 2.6%** at non-AI hospitals (62.5% relative). Door-in-door-out **192 → 128 minutes**. Higher odds of good functional outcomes (OR 1.16). The largest real-world stroke-AI evaluation to date.
+- **EyeFM RCT** (Wu, Dai et al. *Nature Medicine* Aug 2025) — 16 ophthalmologists, 668 patients, China. Diagnostic rate **75% → 92%** with AI; referral rate **81% → 92%**. Higher follow-up compliance (70% vs 49%) and referral action rates (38% vs 20%) in the AI group.
+- **Cardiac amyloidosis from 4-chamber echo** (Slivnick, Pellikka et al. *European Heart Journal* Jul 2025) — multicenter (n=2,719). AUROC **0.93** vs traditional clinical scores (transthyretin CA score 0.74, increased wall thickness 0.80).
+- **Spirometry interpretation** (Doe, Man et al. *NEJM AI* Jul 2025) — 133 PCPs / NPs randomized to AI assistance (CNN, ArtiQ.Spiro). **Top-diagnosis accuracy +9 points**, COPD identification +16 points. AI also improved technical-quality grading.
+- **AI-ECG cirrhosis screening** (Simonetto, Shah et al. *Nature Medicine* Dec 2025) — 98 primary care teams, 15,596 patients, cluster RCT. New advanced CLD diagnoses **0.5% → 1.0%** (OR 2.1); among ECG-ML-positive patients, diagnoses rose 4% vs 1% (OR 4.4).
+- **Smart Match transfusion ML** (Bishara, Eng et al. *NEJM AI* Nov 2025) — 24,003 silent prospective surgeries, AUROC 0.94, outperformed clinicians and MSBOS guidelines.
+
+These prospective deployments — paired with the LCTfound, MUSK, EchoPrime, EchoNext, PRESENT-SHD foundation models and the [echonext](../entities/echonext.md), [present-shd](../entities/present-shd.md) ECG screening pair — represent the **strong-evidence track** for medical imaging AI.
+
 ## Prospective clinical trials are growing
 
 | Year | Imaging AI prospective trial papers |
@@ -73,5 +87,10 @@ See [fda-510k-pathway](fda-510k-pathway.md) for the regulatory landscape underpi
 - [fda-510k-pathway](fda-510k-pathway.md) — the regulatory route for nearly all cleared imaging AI.
 - [ambient-ai-scribes](ambient-ai-scribes.md), [llm-clinical-reasoning](llm-clinical-reasoning.md), [agentic-clinical-ai](agentic-clinical-ai.md) — adjacent clinical AI categories that are *not* imaging.
 
+## Caveat: the illusion of multimodal readiness
+
+**Gu, Vozila et al., ArXiv Oct 2025** — leading multimodal medical models score well on benchmark questions even when key visual inputs are *missing or perturbed*. Models gave the correct answer well above chance on incomplete questions, with high-confidence chain-of-thought explanations describing visual features that were not present. Strong multimodal benchmark scores often reflect **shortcut learning** rather than visual grounding. ARISE flags this as a critical caveat: benchmark success ≠ clinical readiness.
+
 ## Sources
+- [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Foundational Methods + Applied AI sections — primary citation chain for 2025 prospective trials)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 269–271, 273–276)

@@ -3,7 +3,7 @@ type: concept
 title: AI hallucination in medical contexts
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [evaluation/factuality, concern/safety, model-family/llm, risk]
 ---
 
@@ -55,13 +55,26 @@ The finding: model accuracy collapses when a false statement is framed as the us
 
 When a user says "I believe I have X — am I right?" with a false premise, models tend to play along. This is **a directly diagnostic-relevant failure mode** — the kind of input a clinical LLM would get from a patient asking about their condition.
 
-## NOHARM benchmark (general-purpose LLMs in clinical contexts)
+## NOHARM benchmark — primary 2025 numbers
 
-The NOHARM benchmark tested leading LLMs on open-ended clinical reasoning tasks:
-- **11.8 to 14.6 severely harmful recommendations per 100 clinical cases.**
-- **76.6%** of these were errors of omission (e.g., failing to recommend a critical test) — not commission.
+[noharm](noharm.md) (Wu, Goh et al. ArXiv Dec 2025) is now ingested with full primary detail. Updated numbers from ARISE 2026:
 
-The AI Index uses NOHARM to draw a sharp line: these findings apply to **general-purpose LLMs evaluated on open-ended clinical reasoning**, *not* the narrow task-specific tools driving most current clinical adoption (see [ambient-ai-scribes](ambient-ai-scribes.md), [trews](../entities/trews.md) for tools where the clinician oversight loop catches errors before harm).
+- **Severe harm in up to 22% of cases across 31 LLMs** (the AI Index reported 11.8–14.6 per 100; NOHARM's own paper reports up to 22% severe harm in worst-case configurations).
+- **77% of severe harms are errors of omission** (failing to recommend critical tests/treatments) — confirms and refines the AI Index's 76.6% number.
+- Standard knowledge benchmarks correlate only moderately with NOHARM safety (R = 0.61–0.64) — **MedQA scores do not predict real consult safety.**
+- Best LLMs outperform generalist physicians on NOHARM by ~10%.
+- **Three-agent "advisor + guardian" systems show ~6× higher odds of top-quartile safety** vs solo models.
+
+The narrow-tool vs open-LLM distinction still holds: these findings apply to general-purpose LLMs in open-ended consult tasks, *not* the constrained-workflow narrow tools (see [ambient-ai-scribes](ambient-ai-scribes.md), [trews](../entities/trews.md)).
+
+## More 2025 fragility findings
+
+- **MetaMedQA** (Griot, Yuskel et al. *Nature Communications* Jan 2025) — 12 LLMs, 0% recall recognizing unanswerable / malformed questions. Even GPT-4o (73% accuracy) gives maximum-confidence scores when correct answers are absent. **Disconnect between accuracy and confidence.**
+- **CRAFT-MD** (Johri, Rajpurkar et al. *Nature Medicine* Jan 2025) — converted 2,000 static clinical vignettes to multi-turn natural dialogue. GPT-4 dropped 0.82 → 0.63; GPT-3.5 0.66 → 0.47. With multiple-choice options removed, GPT-4 fell to 0.49. **Models miss critical history details under conversation.**
+- **"None of the other answers" (NOTA)** (Bedi, Shah et al. *JAMA Network Open* Aug 2025) — 100 MedQA questions modified so NOTA is the correct answer (68-item validated set). Frontier-model accuracy drops 9–38%. Models like DeepSeek-R1, o3-mini, Claude 3.5 Sonnet, Gemini 2.0 Flash, GPT-4o, Llama 3.3-70B all degrade. **Strong MCQ performance is partly pattern recognition.**
+- **SourceCheckup** (Wu, Zou et al. *Nature Communications* Apr 2025) — 800 questions, ~50,000 statement–source pairs, 7 LLMs. **50–90% of LLM responses partly unsupported by their own cited references.** Even GPT-4o + RAG: only 55% response-level support; 30% of statements lacked backing. **Retrieval helps but isn't enough.**
+- **The illusion of multimodal readiness** (Gu, Vozila et al. *ArXiv* Oct 2025) — leading multimodal medical models give correct answers above chance even when images are missing/perturbed, with high-confidence chain-of-thought hallucinating visual features that aren't there. **Shortcut learning, not visual grounding.**
+- **Fine-tuning doesn't fix knowledge gaps** (Wu, Zou et al. *NEJM AI* Jul 2025) — fine-tuned six commercial LLMs on new medical knowledge (FDA approvals, EHRs, updated guidelines). Memorization 90%+, generalization to vignettes only 30% drugs / 12% EHR / 20% guidelines. **Fine-tuning ≠ teaching real reasoning.**
 
 ## The RAI tradeoff problem
 
@@ -86,4 +99,5 @@ Top takeaway #8 of the Responsible AI chapter: training techniques aimed at impr
 - [ai-index-2026](../sources/ai-index-2026.md) — primary source.
 
 ## Sources
+- [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Benchmarks & Evaluations + Foundational Methods sections, primary citations)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 3.2, p. 134–138 — RAI benchmarks, HHEM, AA-Omniscience, KaBLE; Ch. 6.2 evidence gaps, p. 278 — NOHARM)

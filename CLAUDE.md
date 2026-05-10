@@ -53,7 +53,8 @@ title: ...
 authors: [...]
 published: YYYY-MM-DD
 ingested: YYYY-MM-DD
-source_path: raw/whatever.pdf
+source_path: raw/whatever.pdf  # local immutable copy; preferred when the source is a downloadable PDF
+url: https://example.org/whatever  # canonical web URL; record both when both exist
 tags: [...]
 ---
 

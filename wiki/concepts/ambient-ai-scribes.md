@@ -3,7 +3,7 @@ type: concept
 title: Ambient AI scribes
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [deployment, task/documentation, evaluation/prospective-trial, workflow]
 ---
 
@@ -51,6 +51,26 @@ Briefly mentioned in the same section:
 - **OpenEvidence** — real-time evidence retrieval platform; reported adoption by **40% of U.S. physicians**.
 - A JAMA Network Open Aug 2025 study evaluated AI tools generating plain-language explanations of lab/imaging/pathology results: 85% of 93 survey respondents found the tool user-friendly; 72% beneficial for lab results, 63% for imaging.
 
+## First RCTs of ambient scribes (2025) — primary evidence
+
+[ARISE 2026](../sources/arise-state-of-clinical-ai-2026.md) flags two NEJM AI Nov 2025 papers as the **first randomized controlled trials of ambient AI scribes**, and refines the picture from "transformative subjective effect, fuzzy objective gain":
+
+- **Afshar, Gordon et al. NEJM AI Nov 2025**: trial-averaged effect of ambient AI on professional fulfillment (+0.14, 95% CI 0.00–0.28) and burnout (−0.44, 95% CI −0.62 to −0.25). **Subjective improvements are real.**
+- **Lukac, Mafi et al. NEJM AI Nov 2025**: head-to-head DAX Copilot vs Nabla. Documentation efficiency metrics measured via Epic Signal. **Time-in-notes savings ~20 seconds per note** — modest objective gain. Both studies report meaningful improvement in burnout and supportive work environment.
+- **Olson, Troup et al. JAMA Network Open Oct 2025** (n=272 physicians, multicenter pre/post): **burnout 52% → 39% (74% lower odds)**, plus improvements in cognitive task load, attention to patients, time documenting after hours. *Wide subjective improvements; full objective causal claim requires the RCTs above.*
+
+The synthesis: subjective burnout reduction is robust; objective time savings are modest (~20 s/note). ARISE predicts further productivity gains will require scribes' scope to expand to **downstream tasks** (orders, communications, claim verification) — see VeriFact (Chung Aghaeepour NEJM AI Dec 2025) and Williams Rosner JAMA IM May 2025 on LLM discharge summaries.
+
+## AI message routing — adjacent inbox-burden win
+
+**Anderson, Harzard et al. NEJM AI Feb 2025** — BERT-based NLP routing of patient-portal messages, deployed across 4 Emory outpatient clinics. 469 live messages routed across 14 days:
+- Time-to-first-staff-interaction: **1.2h → 0.2h** (median).
+- Full conversation resolution: **26.7h → 4.2h** (median).
+- 2 fewer staff interactions per message (median).
+- 98% routing accuracy.
+
+Adjacent to scribes (same workflow-burden-reduction story); cited by ARISE as evidence that targeted NLP wins exist outside the dominant ambient-scribe vendors.
+
 ## Open questions
 
 - **Diagnostic implications**: scribes summarize but don't diagnose — yet downstream AI tools acting on AI-generated notes could amplify documentation errors. What's the cumulative-error story?
@@ -59,4 +79,5 @@ Briefly mentioned in the same section:
 - Vendor concentration — Abridge dominance, plus DAX (Microsoft/Nuance), Suki, Ambience, Heidi, etc. — what's the differentiation, and where does FDA oversight land if/when scribes start nudging clinical decisions?
 
 ## Sources
+- [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Clinical Workflows section, slides 73–75 + adjacent)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 276–278; Mello framework p. 282)

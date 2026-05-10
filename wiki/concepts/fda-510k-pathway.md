@@ -3,7 +3,7 @@ type: concept
 title: FDA 510(k) pathway for AI/ML medical devices
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [regulation/fda-510k, regulation/samd, deployment]
 ---
 
@@ -56,12 +56,17 @@ Non-radiology authorizations have grown from **7 in 2016 to 60 in 2025**. Cardio
 
 ## Evidence base under this pathway
 
-The 510(k) pathway was designed to enable iteration on existing classes of devices — it relies on **existing safety and efficacy evidence rather than new RCTs**. Singh et al. (2025) analyzed all 1,016 authorizations through Dec 2024 and found:
+The 510(k) pathway was designed to enable iteration on existing classes of devices — it relies on **existing safety and efficacy evidence rather than new RCTs**. Two complementary 2025 analyses make the case:
 
-- **Only 2.4%** of devices with clinical studies were supported by randomized controlled trial data.
-- **Nearly all** devices entered via the 510(k) pathway (vs. De Novo or PMA).
+- **Singh et al. (2025)** — 1,016 authorizations through Dec 2024. Only **2.4%** of devices with clinical studies were supported by RCT data. Nearly all entered via the 510(k) pathway.
+- **ARISE 2026 slide 5** — primary citation: of 691 FDA-cleared AI/ML medical devices (1995–2023):
+  - **>95% went through 510(k).**
+  - **~50% of FDA device summaries omitted study design.**
+  - **53% lacked sample size.**
+  - **<1% reported patient outcomes.**
+  - **95% did not report demographic data; 91% lacked bias assessments.**
 
-This is the regulatory underpinning of the [clinical-validation](clinical-validation.md) tension.
+This is the regulatory underpinning of the [clinical-validation](clinical-validation.md) tension. The mismatch between deployed scale (1,357+ cleared devices, $70B market) and reported evidence (<1% with patient outcomes) is the central friction point in the field.
 
 ## January 2025 FDA guidance on Total Product Life Cycle
 
@@ -81,4 +86,5 @@ In January 2025, the FDA issued draft guidance on AI-enabled device software fun
 - [ambient-ai-scribes](ambient-ai-scribes.md) — most scribes are *not* devices and bypass this pathway entirely.
 
 ## Sources
+- [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (slide 5 — primary citation chain for the device-summary deficiency stats)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2, p. 273–276)

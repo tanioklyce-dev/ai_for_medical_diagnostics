@@ -3,7 +3,7 @@ type: concept
 title: Agentic clinical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [task/diagnosis, model-family/llm, evaluation/benchmark, deployment]
 ---
 
@@ -26,13 +26,32 @@ This is the signature 2025 result for clinical agentic AI — see [mai-dxo](../e
 ### Multi-agent gains over single-agent baselines
 Across published benchmarks, multi-agent frameworks showed gains of **7% to over 60%** in diagnostic accuracy vs. single-agent baselines (Gorenshtein et al., Zheng et al., Liu et al., 2025). The mechanism: assigning specialized roles (diagnostician, pharmacist, etc.) and coordinating through structured reasoning protocols.
 
-### MedAgentBench (Jiang et al., 2025)
+### [medagentbench](medagentbench.md) (Jiang et al., NEJM AI Aug 2025)
 A more deployment-realistic benchmark:
-- **300 clinically derived tasks** in a virtual EHR environment.
-- Best-performing model achieved **69.7% task success rate**.
-- The conclusion in the AI Index: "despite access to advanced capabilities such as tool use and iterative reasoning, the evidence base for reliable autonomous clinical AI agents remains early-stage."
+- **300 clinically derived tasks** in a FHIR-compliant virtual EHR (100 patients, >700k data elements).
+- Half query-based (retrieve from chart), half action-based (modify chart).
+- Best-performing models: **Claude 3.5 Sonnet 70%, GPT-4o 64%, DeepSeek-V3 63%**.
+- Strong on queries (Claude 3.5 Sonnet 85%), weak on actions (54%) — *the gap is not closing in 2025*.
 
-The gap between **NEJM-style case benchmarks (85%+)** and **EHR-task benchmarks (~70%)** is informative — capabilities degrade as the environment gets messier.
+The leap from **NEJM CPC-case benchmarks (80–85%+, [mai-dxo](../entities/mai-dxo.md))** to **EHR-action benchmarks (54%)** is informative — capabilities degrade sharply as the environment gets messier.
+
+### MAC framework — multi-agent for rare-disease diagnosis (Chen, Li et al. npj Digital Medicine Mar 2025)
+Operationalizes multi-agent conversation as a reasoning scaffold (division of cognitive labor + structured disagreement) for rare disease diagnosis.
+- MAC achieved **78%** vs **GPT-4 single-agent 58%** accuracy on curated rare-disease case reports.
+- Architecture ablations show that a *supervising/coordination role* meaningfully contributes; assigning "specialist personas" alone is not sufficient.
+- Sweet spot at ~4 doctor agents + a supervisor.
+
+### TrialGenie — multi-agent for clinical trial design (Lie, Wang et al. medRxiv Apr 2025)
+Five-agent system (Trialist, Informatician, Clinician, Statistician, Supervisor) parses protocols, maps them to MIMIC-IV via SQL, and generates trial designs end-to-end. Produces transparent, step-by-step trial logic instead of opaque recommendations.
+
+### The optimization paradox — counterpoint to MAI-DxO and MAC
+**Bedi, Shah et al., ArXiv Jun 2025** tested 8 single-agent and 26 multi-agent systems on 2,400 MIMIC-CDM ED cases:
+- A "best of breed" multi-agent system (strongest individual components) achieved **86% lab-interpretation accuracy** but only **68% diagnostic accuracy**.
+- A less-optimized multi-agent system reached **77% diagnostic accuracy**.
+- *Component-level optimization broke information flow between agents.* Failure modes: insufficient history → downstream diagnostic-efficiency loss.
+- Implication: agent compatibility and information flow matter more than picking the strongest individual model. End-to-end system validation is essential.
+
+This is a critical caveat to the [mai-dxo](../entities/mai-dxo.md) story: not all multi-agent systems generalize the way MAI-DxO does, and naive ensembles can perform worse than less-engineered ones.
 
 ## Adjacent: agentic AI for biomedical *discovery* (vs. clinical care)
 
@@ -61,5 +80,10 @@ The Responsible AI chapter notes (Ch. 3.3) that across surveyed organizations, *
 - [clinical-validation](clinical-validation.md) — the evidence-rigor context.
 - [ai-hallucination-medical](ai-hallucination-medical.md) — failure modes that compound across multi-step reasoning.
 
+## Multi-agent safety advantage
+
+[noharm](noharm.md) shows that **three-agent "advisor + guardian" LLM systems** have ~6× higher odds of top-quartile clinical safety vs solo models. Multi-agent architectures aren't just an accuracy win — they're a measurable safety win on the severe-harm axis. This may turn out to be the most-deployment-relevant finding in the multi-agent story.
+
 ## Sources
+- [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Foundational Methods section, slides 45–48)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 highlight box on AI Agents in Clinical Medicine, p. 272–273; Ch. 6.1 highlight on Automated and Agentic Biomedical Discovery, p. 268; Ch. 3.3 on agentic AI scaling barriers, p. 145)

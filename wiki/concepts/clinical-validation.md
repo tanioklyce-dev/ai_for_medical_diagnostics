@@ -3,7 +3,7 @@ type: concept
 title: Clinical validation of medical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [evaluation, governance, prospective-trial, evidence]
 ---
 
@@ -11,13 +11,17 @@ tags: [evaluation, governance, prospective-trial, evidence]
 
 The central evidence tension in 2025 medical AI: deployment is accelerating much faster than the rigorous evidence base. Most published clinical AI evaluations are not done on real patients — they are done on **exam-style questions, retrospective benchmarks, or curated case series**.
 
-## The headline finding (2026)
+## The headline finding (2026) — primary citation
 
-The Stanford-Harvard [arise-network](../entities/arise-network.md)'s inaugural *State of Clinical AI Report* (January 2026) reviewed **over 500 clinical AI studies** and concluded:
+The "5% used real clinical data" critique now has a **primary citation**: **Bedi, Shah et al., JAMA Jan 2025** — a systematic review of **n=519 LLM-evaluation studies (2022–2024)**. Key findings:
 
-- **~half** relied on exam-style questions (e.g., USMLE-style, NEJM clinicopathological cases) rather than real patient data.
-- **Only 5%** used real clinical data.
-- The report's overall conclusion: AI performs most effectively when **supporting rather than replacing** clinician judgment.
+- **95%** of studies used **accuracy** as the primary evaluation metric.
+- **Only 5%** used real patient data; the rest used exam-style questions, vignettes, or synthetic data.
+- Most-evaluated tasks: medical-licensing-exam questions (45%) and clinical diagnoses (19%).
+- Almost-never-evaluated tasks: assigning billing codes (0.2%), writing prescriptions (0.2%) — i.e., the administrative tasks clinicians most want help with (see [medhelm](medhelm.md)).
+- Fairness, bias, and toxicity studied in 16% of papers; deployment considerations in 5%; calibration / uncertainty in 1%.
+
+This finding is summarized via [arise-network](../entities/arise-network.md)'s inaugural [State of Clinical AI Report 2026](../sources/arise-state-of-clinical-ai-2026.md), which is the primary lens for this wiki on the evidence-base critique. ARISE's overall conclusion: AI performs most effectively when **supporting rather than replacing** clinician judgment.
 
 A separate peer-reviewed analysis ([Singh et al., 2025](https://www.bmj.com/)) of 1,016 FDA AI/ML device authorizations through Dec 2024 found that **only 2.4%** of devices with clinical studies were supported by randomized controlled trial data, with nearly all entering via the [fda-510k-pathway](fda-510k-pathway.md).
 
@@ -33,13 +37,21 @@ A separate peer-reviewed analysis ([Singh et al., 2025](https://www.bmj.com/)) o
 
 ## The narrow-tool vs. open-LLM distinction
 
-The 2026 AI Index makes a crucial framing point. Evidence-base concerns apply most sharply to **general-purpose LLMs in open-ended clinical reasoning** — see [ai-hallucination-medical](ai-hallucination-medical.md) and the NOHARM benchmark (11.8–14.6 severely harmful recommendations per 100 cases for top LLMs, 76.6% errors of omission).
+Evidence-base concerns apply most sharply to **general-purpose LLMs in open-ended clinical reasoning**:
+
+- [noharm](noharm.md) (Wu/Goh ArXiv Dec 2025): up to **22% of consult cases** show severely harmful LLM recommendations across 31 LLMs; **77% are errors of omission**. Standard knowledge benchmarks correlate only moderately (R=0.61–0.64) with NOHARM safety scores.
+- **MetaMedQA** (Griot Yuskel Nature Communications Jan 2025): 12 LLMs all show 0% recall at recognizing unanswerable / malformed questions — a metacognitive failure mode.
+- **CRAFT-MD** (Johri Rajpurkar Nature Medicine Jan 2025): GPT-4 accuracy collapses 0.82 → 0.63 going from static vignette to multi-turn dialogue. Robustness fragility.
+- "**None of the other answers**" failure mode (Bedi/Shah JAMA Network Open Aug 2025): replacing the correct answer with NOTA drops frontier-model MedQA accuracy 9–38% — strong MCQ performance is partly pattern-matching, not reasoning.
 
 By contrast, **narrow tools operating in constrained workflows with clinician oversight have generated much stronger real-world evidence**:
-- [ambient-ai-scribes](ambient-ai-scribes.md) — multiple multi-site outcomes papers in 2025 ([abridge](../entities/abridge.md) deployment).
+- [ambient-ai-scribes](ambient-ai-scribes.md) — multiple multi-site outcomes papers and the first two RCTs (modest objective time savings, real burnout reduction).
+- [ai-consult-penda](../entities/ai-consult-penda.md) — first prospective LLM-copilot deployment in real care (Penda Health Kenya, 39,849 visits, 16% diagnostic-error reduction). Note: *this is an LLM not a narrow tool*, suggesting the "narrow vs. open" line is starting to blur.
 - AI sepsis prediction — [trews](../entities/trews.md) and COMPOSER reported absolute mortality reductions in prospective deployments.
+- AI-assisted mammography — Vara MG (Eisemann Nature Medicine Jan 2025), 12 sites, 463k women, 17.6% increase in cancer detection, recall slightly *lower*.
+- Brainomix 360 stroke (Nagaratnam Lancet Dec 2025) — 26 NHS hospitals, EVT rates doubled (2.3%→4.6%) at AI sites.
 
-This distinction shows up repeatedly in governance frameworks (FURM, GUIDE-AI Lab) and is likely to be a load-bearing organizing principle for the wiki.
+This distinction shows up repeatedly in governance frameworks (FURM, GUIDE-AI Lab) and remains the load-bearing organizing principle for the wiki — but the LLM-copilot deployments are an emerging third category.
 
 ## Notable 2025 prospective clinical trials cited
 
@@ -61,5 +73,15 @@ The growth from 417 (2024) → 536 (2025) prospective imaging trial papers is a 
 - Where are the dark spots — specialties with high adoption but minimal prospective evidence (e.g., parts of radiology, pathology)?
 - What's the calibration story? AI may achieve high AUC but be poorly calibrated, leading to over/under-treatment downstream.
 
+## Cross-cutting deployment concerns
+
+[ARISE 2026](../sources/arise-state-of-clinical-ai-2026.md) adds two failure modes for clinician–AI teaming that complicate "validation" itself:
+
+- [automation-bias-medical-ai](automation-bias-medical-ai.md) — Qazi et al. medRxiv Sept 2025: AI-trained physicians dropped from 85% → 73% accuracy when fed deliberately erroneous LLM output, despite voluntary AI consultation and prior AI-literacy training.
+- [ai-deskilling](ai-deskilling.md) — Budzyn et al. Lancet GH Oct 2025: colonoscopy adenoma detection rate fell 28.4% → 22.4% in the same endoscopists 3 months *after* AI exposure.
+
+Implication: a successful prospective trial of AI-assisted care does not by itself demonstrate that the *system* (clinicians + AI) will perform well at scale or over time.
+
 ## Sources
+- [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (slides 5, 32, 70–72, throughout)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6, p. 271, 273, 278, including ARISE box)

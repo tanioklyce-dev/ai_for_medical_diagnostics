@@ -4,7 +4,8 @@ title: AI Index Report 2026 (Stanford HAI)
 authors: [Sha Sajadieh, Loredana Fattorini, Raymond Perrault, Vanessa Parli, Lapo Santarlasci, Juan Pava, Nestor Maslej, Russ Altman, Erik Brynjolfsson, Carla Brodley, Jack Clark, Virginia Dignum, Vipin Kumar, James Landay, Terah Lyons, James Manyika, Juan Carlos Niebles, Yoav Shoham, Elham Tabassi, Russell Wald, Toby Walsh, Dan Weld]
 published: 2026-04
 ingested: 2026-05-10
-source_path: https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf
+source_path: raw/ai_index_report_2026.pdf
+url: https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf
 pages: 425
 license: CC BY-ND 4.0
 tags: [broad-survey, source-of-record, stanford-hai]
