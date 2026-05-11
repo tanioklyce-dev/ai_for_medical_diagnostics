@@ -43,7 +43,7 @@ Industry consulting roles spanning the corneal-imaging-vendor ecosystem: **Nidek
 
 ## Standards and regulatory work
 
-A major dimension of Klyce's career missing from earlier wiki coverage — he is the **standards-body architect** of how corneal topography is represented across the global ophthalmic-device ecosystem:
+Klyce is the **standards-body architect** of how corneal topography is represented across the global ophthalmic-device ecosystem:
 
 - **ANSI Committee on Ophthalmic Optics**, member of the Corneal Topography Standards Effort (1994–1998) and ASCRS ANSI Representative (2004–).
 - **ISO/TC 172/SC 7** (International Organization for Standardization, Optics and Optical Instruments, Subcommittee 7), expert (2004–) — Ophthalmic optics and instruments.
