@@ -17,6 +17,10 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [ogut-ai-clinical-medicine-2025](sources/ogut-ai-clinical-medicine-2025.md) — Ogut single-author PRISMA-style review (MDPI *Clin. Pract.* Sept 2025, 150 studies across 5 domains). Useful as citation map to 2016–2021 landmarks (Gulshan, Rajkomar, Rodriguez-Ruiz, Attia, Försch, Vasey); methodologically light.
 - [klyce-computer-assisted-corneal-topography-1984](sources/klyce-computer-assisted-corneal-topography-1984.md) — Klyce IOVS 1984, foundational quantitative-corneal-topography paper; explicit 1984 vision of `diagnose` + `learn` expert-system architecture.
 - [maeda-klyce-keratoconus-screening-1994](sources/maeda-klyce-keratoconus-screening-1994.md) — Maeda/Klyce/Smolek/Thompson IOVS 1994, first explicitly-AI-labeled keratoconus screening system (discriminant analysis + KPI + Pascal rule-based expert system; 89% sens / 99% spec on validation).
+- [maeda-klyce-keratoconus-neural-network-1995](sources/maeda-klyce-keratoconus-neural-network-1995.md) — Maeda/Klyce/Smolek IOVS 1995, "first report of the successful application of a neural network model to classify corneal topography"; 11-input 18-hidden 7-output backpropagation NN; 80% test accuracy on 75 maps; introduces SDP index.
+- [smolek-klyce-keratoconus-detection-1997](sources/smolek-klyce-keratoconus-detection-1997.md) — Smolek/Klyce IOVS 1997, systematic head-to-head validation of two NNs vs. KCI/Rabinowitz/SimK; 100% accuracy on 150-cornea test set across 9 categories; first objective quantitative threshold for keratoconus suspect (KCS); deployed as KSI in Tomey topographers.
+- [klyce-mcdonald-slade-topographic-indices-2006](sources/klyce-mcdonald-slade-topographic-indices-2006.md) — Klyce/McDonald/Slade CRST October 2006, practitioner-facing cover story documenting commercial deployment of KCI/KSI in Tomey, CIM/Shape Factor in Humphrey/Zeiss Pathfinder, and a **deployed neural-network classifier** in Nidek Corneal Navigator. Klyce-as-Nidek-paid-consultant disclosed.
+- [saleh-hussein-ai-corneal-topography-2019](sources/saleh-hussein-ai-corneal-topography-2019.md) — Saleh/Hussein JISTA 2019, 6-page narrative review of AI in corneal topography across ANN/SVM/DT/Naive Bayes; useful as secondary citation map for 2000s–2010s classical-ML era; treats 1995/1997 Klyce-group papers as foundational ANN references.
 - [llm-wiki](sources/llm-wiki.md) — meta-document describing the LLM-wiki pattern this project uses *(methodology, not domain content)*
 
 ## Concepts
@@ -34,7 +38,7 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [medhelm](concepts/medhelm.md) — Stanford 35-benchmark suite; 12 use real EHR data; LLMs strongest on documentation, weakest on admin/workflow
 - [medagentbench](concepts/medagentbench.md) — Stanford FHIR-EHR benchmark; 300 query+action tasks; Claude 3.5 Sonnet 70% (queries 85%, actions 54%)
 - [sdbench](concepts/sdbench.md) — Microsoft AI Sequential Diagnosis Benchmark; 304 NEJM CPCs as stepwise encounters; Gatekeeper + synthetic findings + Judge methodology
-- [keratoconus-screening-ai](concepts/keratoconus-screening-ai.md) — four-decade ophthalmology-AI lineage from quantitative topography (Klyce 1984) → expert system (Klyce/Maeda 1994) → neural network (Maeda/Klyce 1995, Smolek/Klyce 1997) → modern deep learning
+- [keratoconus-screening-ai](concepts/keratoconus-screening-ai.md) — four-decade ophthalmology-AI lineage: quantitative topography (Klyce 1984) → expert system (Klyce/Maeda 1994) → neural network (Maeda/Klyce 1995, Smolek/Klyce 1997) → **commercial deployment in Tomey/Humphrey/Nidek by 2006** → modern deep learning; documents fast research-to-deployment translation and 20-year-old human-in-loop framing
 - [protein-language-models](concepts/protein-language-models.md) — 2025 shift from scaling (ESM3) to specialization (MSAPairformer); ProteinGym
 - [cofolding-models](concepts/cofolding-models.md) — AlphaFold 3 lineage; FoldBench; data-not-scale bottleneck; commercially permissive open replications
 - [digital-twins-medicine](concepts/digital-twins-medicine.md) — NASEM definition (only 12.1% of studies satisfy); Twin Health diabetes RCT
@@ -51,7 +55,7 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [trews](entities/trews.md) — Targeted Real-time Early Warning System (Johns Hopkins/Bayesian Health); 18.7% sepsis mortality reduction across 13 Cleveland Clinic hospitals
 - [arise-network](entities/arise-network.md) — Stanford-Harvard meta-evaluator; publishes *State of Clinical AI Report* and maintains [noharm](concepts/noharm.md) benchmark
 - [eric-horvitz](entities/eric-horvitz.md) — Microsoft CSO and connecting figure across MAI-DxO, ARISE, collaborative-AI design, and foundational Bayesian-decision-theory diagnostic-AI work back to Pathfinder (1992)
-- [stephen-klyce](entities/stephen-klyce.md) — vision-research physiologist (LSU 1979–2008, now Mount Sinai); foundational quantitative corneal topography (1984) and first AI-labeled keratoconus screening expert system (1994); KPI/DSI/OSI/CSI indices still in routine use
+- [stephen-klyce](entities/stephen-klyce.md) — vision-research physiologist (Yale PhD 1971, Stanford 1972–79, LSU 1979–2008, now Mount Sinai); foundational quantitative corneal topography (1984), first AI-labeled keratoconus expert system (1994), first NN corneal-topography classifier (1995), first systematic NN validation (1997); 36-year NEI R01-EY03311 PI; 560+ publications; Scholar GPS #1 all-time in Corneal Topography; ANSI/ISO/DICOM standards architect; ARVO President 1990
 - [evo-2](entities/evo-2.md) — 40B-param genomic foundation model (Arc Institute); outperformed by 200M GPN-Star on variant effect
 - [alphafold-3](entities/alphafold-3.md) — Google DeepMind cofolding flagship; 64.9% on FoldBench, still leading
 
@@ -60,15 +64,19 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 
 ## Awaiting ingest (in `raw/`)
 - `raw/claudes-constitution_webPDF_26-02.02a.pdf` — Anthropic, Claude's Constitution *(relevance to medical diagnostics: indirect; deployment-safety / refusal behavior in clinical contexts)*
+- `raw/Klyce Underserved Fin dist.pptx` — Klyce presentation on underserved populations (109 MB .pptx; likely telemedicine/equity relevance via ASCRS Telemedicine Task Force chair role 2018–2020); needs PowerPoint→text conversion before ingest
+
+## Used as biographical-update inputs (not separate source pages)
+- `raw/KLYCECV2026.pdf` — Klyce 2026 full CV (49 pp); primary source for the rich biographical content in [stephen-klyce](entities/stephen-klyce.md)
+- `raw/2026BIOSKETCHKLYCE.pdf` — Klyce 2026 1-page biosketch; primary source for self-described AI-first-in-ophthalmology claim
 
 ## Cited but not yet in `raw/`
-- Maeda, Klyce, Smolek 1995 IOVS, *Neural network classification of corneal topography: preliminary demonstration* ([PubMed 7775110](https://pubmed.ncbi.nlm.nih.gov/7775110/)).
-- Smolek & Klyce 1997 IOVS, *Current keratoconus detection methods compared with a neural network approach* ([PubMed 9344352](https://pubmed.ncbi.nlm.nih.gov/9344352/)).
 - Bedi/Shah JAMA Jan 2025 — primary source for the "5%" stat.
 - NOHARM primary (Wu/Goh ArXiv Dec 2025).
 - Brodeur Buckley Manrai Rodman ArXiv Jul 2025 — primary o1-preview / NEJM-CPC / ED paper.
 - Vasey/Ursprung et al. JAMA Network Open 2021 — ML-CDSS systematic review (n=37).
-- `raw/1426.pdf`, `raw/2749.pdf` — 1984/1994 corneal-topography papers; out of wiki scope.
+- Klyce/Karon/Smolek *J Refract Surg* 2005;21(suppl):617–22 — primary description of the Nidek Corneal Navigator deployed neural network.
+- Lozano-Castaneda et al. 2023 *Diagnostics* MDPI — systematic narrative review of keratoconus AI.
 
 ## Suggested next sources to fetch
 *(see [overview](overview.md) § Open questions for full list)*
