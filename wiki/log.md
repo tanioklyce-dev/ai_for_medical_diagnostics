@@ -125,3 +125,29 @@ Sources: `raw/1327.pdf` (Maeda/Klyce/Smolek IOVS June 1995, 9 pp, *Neural Networ
 **Cited but not yet in `raw/`**: Klyce/Karon/Smolek *J Refract Surg* 2005;21(suppl):617–22 (primary description of Nidek Corneal Navigator); Lozano-Castaneda 2023 *Diagnostics* MDPI systematic review.
 
 **Deferred**: `raw/claudes-constitution_webPDF_26-02.02a.pdf` (indirect relevance, deferred per prior decision).
+
+## [2026-05-10] ingest | Randleman et al. AJO 2025 — subclinical keratoconus consensus evaluation
+Source: `raw/1-s2.0-S0002939425001291-main.pdf` (9 pp, Randleman JB, Susanna BN, Hammoud B, Dutra BAL, Scarcelli G, Santhiago MR, Dupps Jr WJ, Koch DD, *Am J Ophthalmol* 275:27–35, July 2025). DOI: 10.1016/j.ajo.2025.03.013. CC BY-NC-ND 4.0. Filed as [randleman-subclinical-keratoconus-consensus-2025](sources/randleman-subclinical-keratoconus-consensus-2025.md).
+**Read scope**: full paper.
+**Pages created (1)**: source page only.
+**Pages updated (2)**: [keratoconus-screening-ai](concepts/keratoconus-screening-ai.md) (new "Current state of screening-metric evidence (2025)" subsection between rung-3.5 and rung-4 covering Randleman 2025 headline result + Klyce-lineage validation + D-score performance + KISA% deprecation + label-quality crisis); [index.md](index.md) (added source entry and refreshed [keratoconus-screening-ai](concepts/keratoconus-screening-ai.md) summary).
+**Notable findings**:
+- The 2015 Global Consensus on Keratoconus and Ectatic Diseases statement *"posterior corneal elevation abnormalities must be present to diagnose mild or subclinical keratoconus"* is **not supported by post-2015 evidence**. Across 29 reviewed studies (2011–2022), anterior surface metrics led in 37.9% of intrastudy comparisons, thickness metrics in 39.2%, posterior surface metrics in only 13.8%. No four-year interval showed posterior superiority.
+- Validates the methodological choice of the [1994 Klyce/Maeda KPI work](sources/maeda-klyce-keratoconus-screening-1994.md): KPI/DSI/OSI/CSI/SAI/IAI/AA are all anterior-surface metrics computed from Placido-disk videokeratography. The 2025 evidence ordering (anterior ≈ thickness > posterior) is consistent with the engineered-feature direction the Klyce group chose.
+- Pentacam multimetric **D score** (Belin/Ambrósio Enhanced Ectasia Display, Oculus — descends from the same discriminant-analysis tradition as Klyce/Maeda 1994 KPI) performs well but does not consistently outperform anterior-surface metrics alone.
+- **KISA% (Rabinowitz/Rasheed 1999) explicitly deprecated** for subclinical-keratoconus classification by the 2024–25 evidence (Hammoud, Dupps Jr, Scarcelli, Randleman 2024 *J Refract Surg* 40:e614–24).
+- **Label-quality crisis**: across the 29 reviewed papers, "subclinical keratoconus" has no standard operational definition. Only ~20% of papers required CDVA ≥ 20/20 as an inclusion criterion. Many classification systems would not exclude clinical-keratoconus cases. AI/ML systems trained on heterogeneously labeled SKC data inherit this label drift.
+- **Guideline-vs-evidence drift as a clinical-AI case study**: the 2015 Delphi-panel consensus was issued without primary supporting data, was contested upon publication (Saad/Gatinel 2015), and ten years later a NIH-funded literature review finds the central claim unsupported. This is a clean primary-source case for the [clinical-validation](concepts/clinical-validation.md) framing on evidence-based vs. consensus-based clinical-AI deployment.
+- **Author note**: J. Bradley Randleman is the bibliometrician of [Klyce's #11 most-cited-author ranking in Refractive Surgery](entities/stephen-klyce.md) (Randleman 2023 *J Refract Surg*). Same author here.
+
+**Citation precedence**:
+- Primary for the 2025 systematic-evidence ordering (anterior ≈ thickness > posterior) for SKC detection.
+- Primary for the 2025 deprecation of KISA% for SKC classification (with Hammoud 2024 *J Refract Surg* as the direct empirical support).
+- Secondary for any specific reviewed primary study (Lopes 2018 AI, Twa 2005 DT, Kovács 2016 ML, etc.) — prefer the underlying primary publication.
+
+**Cited but not yet in `raw/`**: 
+- Hammoud, Dupps Jr, Scarcelli, Randleman 2024 *J Refract Surg* 40:e614–24 — primary empirical KISA% deprecation paper.
+- Gomes et al. 2015 *Cornea* 34:359–369 — the 2015 Global Consensus original statement.
+- Saad & Gatinel 2015 *Cornea* 34:e33–e34 — primary contemporaneous critique of the 2015 consensus.
+- Moshirfar 2019 *Med Hypothesis Discov Innov Ophthalmol* 8(3):204–218 and 8(3):177–203 — two-part Pentacam-screening review series.
+- Kuo et al. 2024 *Ophthalmology* 131:107–121 — AAO Ophthalmic Technology Assessment on advanced corneal imaging.

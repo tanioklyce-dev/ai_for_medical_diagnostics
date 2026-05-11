@@ -3,7 +3,7 @@ type: concept
 title: Keratoconus screening AI — from quantitative topography to deep learning
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/klyce-computer-assisted-corneal-topography-1984.md, ../sources/maeda-klyce-keratoconus-screening-1994.md, ../sources/maeda-klyce-keratoconus-neural-network-1995.md, ../sources/smolek-klyce-keratoconus-detection-1997.md, ../sources/klyce-mcdonald-slade-topographic-indices-2006.md, ../sources/saleh-hussein-ai-corneal-topography-2019.md, ../sources/ogut-ai-clinical-medicine-2025.md, ../sources/arise-state-of-clinical-ai-2026.md]
+sources: [../sources/klyce-computer-assisted-corneal-topography-1984.md, ../sources/maeda-klyce-keratoconus-screening-1994.md, ../sources/maeda-klyce-keratoconus-neural-network-1995.md, ../sources/smolek-klyce-keratoconus-detection-1997.md, ../sources/klyce-mcdonald-slade-topographic-indices-2006.md, ../sources/saleh-hussein-ai-corneal-topography-2019.md, ../sources/randleman-subclinical-keratoconus-consensus-2025.md, ../sources/ogut-ai-clinical-medicine-2025.md, ../sources/arise-state-of-clinical-ai-2026.md]
 tags: [modality/ophthalmology, task/screening, task/classification, historical, deployment]
 ---
 
@@ -40,6 +40,20 @@ A four-decade lineage of automated corneal-shape classification, beginning with 
 | **Nidek Corneal Navigator** | **Deployed neural-network classifier** across 7 categories incl. keratoconus suspect, pellucid marginal degeneration, post-keratoplasty, myopic/hyperopic refractive surgery |
 
 The Nidek Corneal Navigator is **a deployed clinical neural-network classifier in 2006** — twelve years before the deep-learning wave broke into mainstream medical imaging. Klyce's paid-consultant role at Nidek (documented in the 2006 paper) is the direct research-to-industry pipeline. This commercial-deployment evidence corrects a common framing that "clinical AI" began with Gulshan/Esteva 2016–17 deep-learning papers.
+
+### Current state of screening-metric evidence (2025)
+
+[Randleman et al. 2025 AJO](../sources/randleman-subclinical-keratoconus-consensus-2025.md) systematically reviews 29 studies (2011–2022) on the diagnostic performance of anterior corneal surface, thickness, and posterior corneal surface metrics for **subclinical keratoconus (SKC)** detection. The paper directly evaluates whether the **2015 Global Consensus on Keratoconus and Ectatic Diseases** consensus statement — *"posterior corneal elevation abnormalities must be present to diagnose mild or subclinical keratoconus"* — is supported by primary evidence.
+
+**Headline result.** Anterior surface metrics led in 37.9% of intrastudy comparisons, thickness metrics in 39.2%, posterior surface metrics in only 13.8%. **The 2015 consensus claim about posterior elevation is not supported by the post-2015 literature.** No 4-year interval from 2011–2022 showed posterior metrics outperforming anterior or thickness metrics.
+
+**Implications for the Klyce-group lineage.** The 1994 [maeda-klyce-keratoconus-screening-1994](../sources/maeda-klyce-keratoconus-screening-1994.md) indices — KPI, DSI, OSI, CSI, IAI, AA, SAI — are all **anterior-surface metrics** (computed from Placido-disk-based TMS-1 videokeratography of the anterior cornea). The 2025 evidence ordering (anterior ≈ thickness > posterior) validates the methodological choice the Klyce group made in 1994 not to rely on posterior elevation. The deep-learning era has expanded into Scheimpflug-based Pentacam tomography (which sees both surfaces) and OCT (which sees thickness directly), but the anterior-curvature-based engineered features remain dominant.
+
+**D score performance.** The Pentacam (Oculus) **D score** — a multimetric Belin/Ambrósio Enhanced Ectasia Display classifier combining anterior, thickness, biomechanical, and posterior inputs via discriminant analysis (the same statistical method [1994 KPI](../sources/maeda-klyce-keratoconus-screening-1994.md) used) — performed best in 26.7% of the 15-paper D-subgroup, but anterior surface metrics still led at 33.3%. The multimetric advantage is modest relative to well-chosen anterior metrics alone.
+
+**KISA% deprecation.** The Rabinowitz [KISA% index](https://pubmed.ncbi.nlm.nih.gov/10543856/) (Rabinowitz & Rasheed 1999), used in 70% of the D-score-subgroup papers as a secondary classification criterion, is explicitly recommended *against* by the Randleman 2025 review for subclinical-disease classification: it cannot reliably exclude clinical keratoconus from being mis-labeled as normal. Primary support: Hammoud, Dupps Jr, Scarcelli, Randleman 2024 *J Refract Surg* 40:e614–e24.
+
+**Label-quality crisis.** Across the 29 reviewed papers, *"subclinical keratoconus"* has no standard operational definition. Only ~1 in 5 papers required CDVA ≥ 20/20 as an inclusion criterion. AI/ML keratoconus systems trained on heterogeneously labeled datasets inherit this label drift — different studies' "subclinical" categories represent different clinical entities. This is a foundational data-quality problem for the deep-learning rung-4 work.
 
 ### Rung 4 — Modern deep learning (2018–present)
 
@@ -107,5 +121,6 @@ For the wiki:
 - [smolek-klyce-keratoconus-detection-1997](../sources/smolek-klyce-keratoconus-detection-1997.md) — rung-3b primary (systematic validation).
 - [klyce-mcdonald-slade-topographic-indices-2006](../sources/klyce-mcdonald-slade-topographic-indices-2006.md) — commercial-deployment primary; documents Tomey/Humphrey/Nidek deployment in 2006.
 - [saleh-hussein-ai-corneal-topography-2019](../sources/saleh-hussein-ai-corneal-topography-2019.md) — secondary reference for the intermediate (2000s–2010s) classical-ML era.
+- [randleman-subclinical-keratoconus-consensus-2025](../sources/randleman-subclinical-keratoconus-consensus-2025.md) — 2025 systematic evaluation of screening-metric performance for subclinical keratoconus; anterior ≈ thickness > posterior; KISA% deprecation; SKC label-quality crisis.
 - [ogut-ai-clinical-medicine-2025](../sources/ogut-ai-clinical-medicine-2025.md) — secondary reference for MYCIN-era context.
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) — secondary reference for 2025 ophthalmology-AI state-of-the-art (EyeFM, DeepRETStroke, DeepDKD).
