@@ -3,7 +3,7 @@ type: concept
 title: LLM clinical reasoning
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md, ../sources/do-olmo-dxgpt-rare-disease-2024.md]
 tags: [task/diagnosis, evaluation/benchmark, model-family/llm, model-family/foundation-model]
 ---
 
@@ -63,6 +63,10 @@ ARISE explicitly raises whether "physician + AI > AI alone" — the **fundamenta
 
 The picture: capability is no longer the bottleneck. Workflow design, training, and interface are. See [automation-bias-medical-ai](automation-bias-medical-ai.md) and [ai-deskilling](ai-deskilling.md) for the cautionary side of teaming.
 
+## Rare-disease task benchmark (DxGPT, 13 LLMs)
+
+A complementary single-LLM benchmark from a different angle: [do-olmo-dxgpt-rare-disease-2024](../sources/do-olmo-dxgpt-rare-disease-2024.md) ([foundation29](../entities/foundation29.md), medRxiv May 2024) evaluates 13 frontier LLMs on **rare-disease diagnostic accuracy** using HPO symptom-list inputs (RAMEDIS n=200, PUMCH n=75) plus a GPT-4-generated synthetic Orphanet set (n=200). See [rare-disease-diagnosis](rare-disease-diagnosis.md) and [dxgpt](../entities/dxgpt.md) for details; the headline finding for this concept page is **Llama 3 70B (open) approaches closed models on synthetic data** (64% P1 / 90.5% P5 vs Claude 3 Opus's 72.5% / 91.5% best closed result), and **GPT-4 Turbo 1106 leads on the hardest real-world set** (PUMCH: 59.5% P1, 64.9% P5). All 13 models show 10–30-percentage-point P1 drops between synthetic and real-world cases — discussed in [clinical-validation](clinical-validation.md). DxGPT itself runs on GPT-4o / o1 in production and is deployed across the Madrid public health system (~6,000 doctors) — see [dxgpt](../entities/dxgpt.md).
+
 ## More deployment-realistic benchmarks
 
 Benchmarks that step closer to deployment realism show much smaller AI advantage:
@@ -116,3 +120,4 @@ Note: physicians were **explicitly forbidden** from external resources (no searc
 - [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md) — primary for single-LLM and orchestrated-LLM baselines on NEJM CPC sequential diagnosis.
 - [arise-state-of-clinical-ai-2026](../sources/arise-state-of-clinical-ai-2026.md) (Model Performance and Clinical Workflows sections — primary citation chain)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6.2 highlight box on LLM Clinical Reasoning, p. 272; AI Agents box p. 272–273)
+- [do-olmo-dxgpt-rare-disease-2024](../sources/do-olmo-dxgpt-rare-disease-2024.md) (rare-disease 13-LLM benchmark; RAMEDIS / PUMCH / Orphanet datasets)

@@ -22,6 +22,7 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [klyce-mcdonald-slade-topographic-indices-2006](sources/klyce-mcdonald-slade-topographic-indices-2006.md) — Klyce/McDonald/Slade CRST October 2006, practitioner-facing cover story documenting commercial deployment of KCI/KSI in Tomey, CIM/Shape Factor in Humphrey/Zeiss Pathfinder, and a **deployed neural-network classifier** in Nidek Corneal Navigator. Klyce-as-Nidek-paid-consultant disclosed.
 - [saleh-hussein-ai-corneal-topography-2019](sources/saleh-hussein-ai-corneal-topography-2019.md) — Saleh/Hussein JISTA 2019, 6-page narrative review of AI in corneal topography across ANN/SVM/DT/Naive Bayes; useful as secondary citation map for 2000s–2010s classical-ML era; treats 1995/1997 Klyce-group papers as foundational ANN references.
 - [randleman-subclinical-keratoconus-consensus-2025](sources/randleman-subclinical-keratoconus-consensus-2025.md) — Randleman/Susanna/.../Koch *Am J Ophthalmol* 275:27–35, July 2025. Literature review of 29 studies finds **anterior + thickness metrics outperform posterior** for subclinical-KC detection (37.9%/39.2% vs 13.8%); contradicts the 2015 Global Consensus posterior-elevation mandate; deprecates KISA%; flags label-quality crisis (no standard SKC definition across literature).
+- [do-olmo-dxgpt-rare-disease-2024](sources/do-olmo-dxgpt-rare-disease-2024.md) — do Olmo, Logroño, Mascías, Martínez, **Isla** ([foundation29](entities/foundation29.md)), medRxiv 10.1101/2024.05.08.24307062v1, May 2024. **13-LLM rare-disease diagnostic benchmark**: synthetic Orphanet (n=200) + RAMEDIS (n=200) + PUMCH (n=75). Best closed P1: Claude 3 Opus 72.5% synthetic / 55% RAMEDIS; GPT-4 Turbo 1106 59.5% PUMCH. Llama 3 70B (open) rivals closed on synthetic. **10–30pp P1 drop synthetic→real-world across all 13 models**. GPT-4-as-generator + GPT-4-as-judge circularity acknowledged. Preprint, not peer-reviewed.
 - [llm-wiki](sources/llm-wiki.md) — meta-document describing the LLM-wiki pattern this project uses *(methodology, not domain content)*
 
 ## Concepts
@@ -43,11 +44,14 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - [protein-language-models](concepts/protein-language-models.md) — 2025 shift from scaling (ESM3) to specialization (MSAPairformer); ProteinGym
 - [cofolding-models](concepts/cofolding-models.md) — AlphaFold 3 lineage; FoldBench; data-not-scale bottleneck; commercially permissive open replications
 - [digital-twins-medicine](concepts/digital-twins-medicine.md) — NASEM definition (only 12.1% of studies satisfy); Twin Health diabetes RCT
+- [rare-disease-diagnosis](concepts/rare-disease-diagnosis.md) — 300–400M people worldwide; 5,000–10,000 conditions; >1yr delay in 56.4%, undiagnosed/misdiagnosed in >45%; Orphanet/RAMEDIS/PUMCH/RareBench datasets; deployed copilots ([dxgpt](entities/dxgpt.md), [ai-consult-penda](entities/ai-consult-penda.md)); HPO-list-vs-narrative transfer gap
 
 ## Entities
 - [mai-dxo](entities/mai-dxo.md) — Microsoft AI Diagnostic Orchestrator; 80–85.5% on NEJM CPCs vs ~20% physicians, 70% cost reduction; primary citation Nori/Horvitz ArXiv 2506.22405
 - [amie](entities/amie.md) — Google's Articulate Medical Intelligence Explorer; non-inferior to PCPs across multi-visit, multimodal, dialogue evaluations
 - [ai-consult-penda](entities/ai-consult-penda.md) — Penda Health × OpenAI Kenya deployment; **first prospective LLM copilot in real care**; 39,849 visits, 16% diagnostic-error reduction
+- [foundation29](entities/foundation29.md) — Spanish nonprofit (Julián Isla, 2017); Microsoft-partnered; builds and operates [dxgpt](entities/dxgpt.md); Dravet-syndrome origin story; Nadella 5-minute-reply connection
+- [dxgpt](entities/dxgpt.md) — free web rare-disease decision-support tool on Azure OpenAI Service (GPT-4o/o1); 500k+ users; Madrid public-system deployment ~6,000 doctors; 2024 13-LLM preprint primary evaluation; **not a medical device**
 - [delphi-2m](entities/delphi-2m.md) — UK Biobank GPT-2-based generative transformer; AUC 0.76 next-disease prediction; 20-year trajectory simulation; medical-event tokenization paradigm
 - [comet](entities/comet.md) — Epic Cosmos Medical Event Transformer; 118M patients / 115B events; largest medical foundation model by event count; available Feb 2026
 - [echonext](entities/echonext.md) — ECG-based deep learning for structural heart disease; trained on 1.2M ECG-echo pairs; outperforms cardiologists 77% vs 64%
@@ -71,6 +75,8 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 - `raw/2026BIOSKETCHKLYCE.pdf` — Klyce 2026 1-page biosketch; primary source for self-described AI-first-in-ophthalmology claim
 
 ## Cited but not yet in `raw/`
+- Microsoft Source EMEA feature, *"A father's quest for diagnosis inspired a disruptive AI solution"* — origin-story + Madrid-deployment secondary source for [foundation29](entities/foundation29.md) / [dxgpt](entities/dxgpt.md). https://news.microsoft.com/source/emea/features/a-fathers-quest-for-diagnosis-inspired-a-disruptive-ai-solution/
+- Chen et al. *RareBench: Can LLMs Serve as Rare Diseases Specialists?* ArXiv 2402.06341 — primary description of RAMEDIS/PUMCH benchmark wrapper used by the DxGPT preprint.
 - Bedi/Shah JAMA Jan 2025 — primary source for the "5%" stat.
 - NOHARM primary (Wu/Goh ArXiv Dec 2025).
 - Brodeur Buckley Manrai Rodman ArXiv Jul 2025 — primary o1-preview / NEJM-CPC / ED paper.

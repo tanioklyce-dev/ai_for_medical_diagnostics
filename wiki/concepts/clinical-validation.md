@@ -3,7 +3,7 @@ type: concept
 title: Clinical validation of medical AI
 added: 2026-05-10
 updated: 2026-05-10
-sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md, ../sources/ogut-ai-clinical-medicine-2025.md]
+sources: [../sources/ai-index-2026.md, ../sources/arise-state-of-clinical-ai-2026.md, ../sources/mai-dxo-sequential-diagnosis-2025.md, ../sources/ogut-ai-clinical-medicine-2025.md, ../sources/do-olmo-dxgpt-rare-disease-2024.md]
 tags: [evaluation, governance, prospective-trial, evidence]
 ---
 
@@ -47,6 +47,7 @@ Evidence-base concerns apply most sharply to **general-purpose LLMs in open-ende
 By contrast, **narrow tools operating in constrained workflows with clinician oversight have generated much stronger real-world evidence**:
 - [ambient-ai-scribes](ambient-ai-scribes.md) — multiple multi-site outcomes papers and the first two RCTs (modest objective time savings, real burnout reduction).
 - [ai-consult-penda](../entities/ai-consult-penda.md) — first prospective LLM-copilot deployment in real care (Penda Health Kenya, 39,849 visits, 16% diagnostic-error reduction). Note: *this is an LLM not a narrow tool*, suggesting the "narrow vs. open" line is starting to blur.
+- [dxgpt](../entities/dxgpt.md) ([foundation29](../entities/foundation29.md)) — free web tool + Madrid public-system integration (~6,000 doctors), 500k+ global users for rare-disease decision support. Parallel deployed-LLM-copilot exemplar to Penda, with a different shape (public/web/nonprofit vs. single-vendor RCT). **No published outcomes evidence yet** — operational counts only — but the team has prospective studies in progress ([do-olmo-dxgpt-rare-disease-2024](../sources/do-olmo-dxgpt-rare-disease-2024.md) §5.1).
 - AI sepsis prediction — [trews](../entities/trews.md) and COMPOSER reported absolute mortality reductions in prospective deployments.
 - AI-assisted mammography — Vara MG (Eisemann Nature Medicine Jan 2025), 12 sites, 463k women, 17.6% increase in cancer detection, recall slightly *lower*.
 - Brainomix 360 stroke (Nagaratnam Lancet Dec 2025) — 26 NHS hospitals, EVT rates doubled (2.3%→4.6%) at AI sites.
@@ -99,6 +100,26 @@ These design patterns are likely to propagate; expect future clinical-AI benchma
 
 **Important methodological note from the paper itself**: when physicians are recruited as the human comparator on case-bench evaluations of publicly-available cases (like NEJM), they are typically **forbidden from external resources** (search engines, LLMs, EHR access, colleagues) to prevent them from looking up the answer. The MAI-DxO paper acknowledges in Section 5.3 that this is *"not reflective of real clinical practice."* The implication for any "AI beats physicians 4×" headline: the human floor is artificial, not deployment-realistic. *This is the right way to do the case-bench experiment, but the result needs to be read accordingly.*
 
+## Synthetic-vs-real-world performance gap (DxGPT preprint)
+
+A clean in-paper demonstration of how much synthetic benchmarks overstate deployment-grade performance: [do-olmo-dxgpt-rare-disease-2024](../sources/do-olmo-dxgpt-rare-disease-2024.md) evaluates 13 LLMs on rare-disease diagnosis across one synthetic and two real-world datasets. Across **all 13 models**, top-1 (P1) accuracy drops **10–30 percentage points** going from GPT-4-generated synthetic cases to HPO-list real-world cases (RAMEDIS, PUMCH from RareBench):
+
+| Model | Synthetic P1 | RAMEDIS P1 | PUMCH P1 |
+|---|---|---|---|
+| Claude 3 Opus | 72.5% | **55.0%** | 52.1% |
+| GPT-4 Turbo 1106 | 68.5% | 51.5% | **59.5%** |
+| Gemini 1.5 Pro | 70.0% | 42.6% | 47.3% |
+| Llama 3 70B (open) | 64.0% | 53.5% | 44.4% |
+| Llama 2 7B (open) | 30.5% | 25.6% | 18.9% |
+
+The point isn't model ranking — it's that **the synthetic-benchmark numbers are systematically optimistic**. This pattern likely generalizes: any GPT-4-generated synthetic dataset risks both stylistic and content circularity with the GPT-4-family models being evaluated.
+
+### LLM-as-judge circularity (a new methodological caveat to track)
+
+The same DxGPT preprint uses **GPT-4 to generate synthetic cases AND as the LLM judge** scoring all 13 models' outputs. The authors acknowledge this in §4.4.2 (citing Shankar et al. 2024 ArXiv 2404.12272, *"Who Validates the Validators?"*): the method "while efficient, might overestimate the models' performance suggesting a need for validation through human expert evaluation in future studies." 
+
+This is a distinct concern from [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md)'s judge-vs-physician κ analysis (κ = 0.70, with physicians often judging the LLM judge *overly strict*). The two findings combined suggest LLM-as-judge can run in either direction depending on prompt design and whether the same model family generates the cases. Per-paper, ask: is the case generator the same family as the model under test, and is the judge family aligned with either? Trust single-judge benchmarks accordingly.
+
 ## Cross-cutting deployment concerns
 
 [ARISE 2026](../sources/arise-state-of-clinical-ai-2026.md) adds two failure modes for clinician–AI teaming that complicate "validation" itself:
@@ -113,3 +134,4 @@ Implication: a successful prospective trial of AI-assisted care does not by itse
 - [mai-dxo-sequential-diagnosis-2025](../sources/mai-dxo-sequential-diagnosis-2025.md) (Sections 2, 3.3, 5.3 — SDBench methodology and constrained-physician note)
 - [ai-index-2026](../sources/ai-index-2026.md) (Ch. 6, p. 271, 273, 278, including ARISE box)
 - [ogut-ai-clinical-medicine-2025](../sources/ogut-ai-clinical-medicine-2025.md) (citation map for Vasey 2021 ML-CDSS systematic review and CONSORT-AI / SPIRIT-AI standards)
+- [do-olmo-dxgpt-rare-disease-2024](../sources/do-olmo-dxgpt-rare-disease-2024.md) (synthetic-vs-real-world P1 gap across 13 LLMs on rare-disease diagnosis; LLM-as-judge circularity caveat)

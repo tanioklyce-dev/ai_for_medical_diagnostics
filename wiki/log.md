@@ -151,3 +151,36 @@ Source: `raw/1-s2.0-S0002939425001291-main.pdf` (9 pp, Randleman JB, Susanna BN,
 - Saad & Gatinel 2015 *Cornea* 34:e33–e34 — primary contemporaneous critique of the 2015 consensus.
 - Moshirfar 2019 *Med Hypothesis Discov Innov Ophthalmol* 8(3):204–218 and 8(3):177–203 — two-part Pentacam-screening review series.
 - Kuo et al. 2024 *Ophthalmology* 131:107–121 — AAO Ophthalmic Technology Assessment on advanced corneal imaging.
+
+## [2026-05-10] ingest | DxGPT / Foundation 29 (3-URL batch)
+Batch ingest of 3 URLs supplied together: `pmc.ncbi.nlm.nih.gov/articles/PMC12468291/`, `dxgpt.app/aboutus`, `youtube.com/watch?v=cW_POtTfJVM`.
+**URL 1 — PMC mirror of Ogut 2025**: identified as duplicate of already-ingested [ogut-ai-clinical-medicine-2025](sources/ogut-ai-clinical-medicine-2025.md). Added `pmc_url:` field to that page's frontmatter; no new source page created.
+**URL 2 — DxGPT (dxgpt.app)**: the dxgpt.app/aboutus page returned 403 to programmatic fetch, so ingested via the **medRxiv preprint** (primary methodological evaluation) + **Microsoft Source EMEA feature** (origin-story / deployment-numbers secondary). Source: `raw/do-olmo-dxgpt-rare-disease-2024.pdf` (medRxiv 10.1101/2024.05.08.24307062v1, do Olmo, Logroño, Mascías, Martínez, Isla, May 9 2024, 13 pp, **preprint**).
+**URL 3 — NVIDIA GTC DC 2025 Healthcare Special Address (Kimberly Powell, ~43 min)**: identified per metadata as drug-manufacturing / surgical-robotics / self-driving-labs focused — adjacent to but not on diagnostics. No transcript accessible (yt-dlp/whisper not installed). **Skipped per user direction**.
+**Pages created (4)**:
+- Source: [do-olmo-dxgpt-rare-disease-2024](sources/do-olmo-dxgpt-rare-disease-2024.md) — preprint summary, full P1/P5 tables for all 13 models × 3 datasets, methodological caveats (GPT-4-as-generator + GPT-4-as-judge circularity per Shankar 2024 caveat).
+- Entity: [foundation29](entities/foundation29.md) — Spanish nonprofit, Julián Isla origin (Dravet-syndrome 10-month odyssey + 2017 Nadella 5-minute-reply connection), Microsoft Azure partnership, [dxgpt](entities/dxgpt.md) launched 2023.
+- Entity: [dxgpt](entities/dxgpt.md) — free web rare-disease decision-support tool on GPT-4o/o1; 500k+ global users; Madrid public-system deployment ~6,000 doctors; not a medical device.
+- Concept: [rare-disease-diagnosis](concepts/rare-disease-diagnosis.md) — diagnostic-odyssey framing (5,000–10,000 conditions; 56.4% >1yr delay per Benito-Lozano 2022; >45% undiagnosed per Molster 2016); Orphanet / RAMEDIS / PUMCH / RareBench / HPO datasets; LLM strengths (broad recall, pattern matching on symptom constellations) and weaknesses (hallucination on genetic specifics, calibration, coverage equity); deployed-copilot landscape ([dxgpt](entities/dxgpt.md) + [ai-consult-penda](entities/ai-consult-penda.md)).
+
+**Pages updated (5)**:
+- [ogut-ai-clinical-medicine-2025](sources/ogut-ai-clinical-medicine-2025.md) — added `pmc_url:` frontmatter (PMC12468291).
+- [clinical-validation](concepts/clinical-validation.md) — new "Synthetic-vs-real-world performance gap (DxGPT preprint)" subsection with 5-model P1 comparison table across synthetic / RAMEDIS / PUMCH; new "LLM-as-judge circularity" subsection citing Shankar 2024 caveat alongside the MAI-DxO κ analysis. Added [dxgpt](entities/dxgpt.md) to the deployed-LLM-copilot bullet list. Added the new source to frontmatter and sources list.
+- [llm-clinical-reasoning](concepts/llm-clinical-reasoning.md) — new "Rare-disease task benchmark (DxGPT, 13 LLMs)" subsection; added source to frontmatter and bottom-of-page sources list.
+- [overview](overview.md) — added [dxgpt](entities/dxgpt.md) / [foundation29](entities/foundation29.md) bullet to the deployed-clinical-AI axis (axis 4); refined working-hypothesis paragraph to name both Penda and DxGPT as the two large-N LLM-copilot exemplars.
+- [index.md](index.md) — added 4 new pages; added Microsoft EMEA feature + Chen 2024 RareBench to "Cited but not yet in raw/".
+
+**Notable findings**:
+- DxGPT preprint provides the cleanest single-paper demonstration of the synthetic-to-real-world LLM-accuracy gap: **10–30 percentage-point P1 drops across all 13 models** going from GPT-4-generated synthetic Orphanet cases to HPO-list real-world cases. PUMCH (Chinese cases) is the hardest.
+- **Best closed real-world P1**: Claude 3 Opus 55% on RAMEDIS; GPT-4 Turbo 1106 59.5% on PUMCH. **Best open**: Llama 3 70B (53.5% RAMEDIS, 44.4% PUMCH).
+- **LLM-as-judge circularity** is a methodological caveat distinct from the MAI-DxO κ=0.70 finding: in the DxGPT preprint, the *same model family* (GPT-4) generates synthetic cases AND scores all model outputs. Authors explicitly cite Shankar 2024 ArXiv 2404.12272 ("Who Validates the Validators?") and acknowledge potential overestimation.
+- [foundation29](entities/foundation29.md) and [ai-consult-penda](entities/ai-consult-penda.md) form a stronger combined case for the wiki's "LLM-as-real-care-copilot" third track than either alone. They have **distinct deployment shapes** (free public web tool / nonprofit / Spanish-language vs single-vendor RCT / single-country / GPT-4o safety-net), so together they're more than one anomaly.
+- **No published outcomes evidence for DxGPT** despite scale (500k+ users, ~6,000 Madrid doctors). Foundation 29 §5.1 declares clinical studies underway — when those land, the entity page should be a major update.
+- The [mai-dxo](entities/mai-dxo.md) and [dxgpt](entities/dxgpt.md) pair are complementary Microsoft-adjacent diagnostic AI stories: research-grade orchestrator on NEJM CPCs (MAI-DxO, no real-care deployment yet) vs nonprofit-partnered consumer-clinician deployment on rare-disease task (DxGPT, no academic-grade outcomes evidence yet).
+
+**Citation precedence**:
+- Primary for the DxGPT 13-LLM benchmark: [do-olmo-dxgpt-rare-disease-2024](sources/do-olmo-dxgpt-rare-disease-2024.md).
+- Primary for the synthetic-vs-real-world LLM-accuracy-gap data point: same preprint.
+- The Microsoft EMEA feature is **secondary** — used for organizational facts (founding date, Microsoft partnership terms, deployment numbers); not citable as primary for any outcome claim.
+
+**Deferred**: `raw/claudes-constitution_webPDF_26-02.02a.pdf` (still deferred). NVIDIA GTC DC 2025 Healthcare Special Address (skipped — adjacent topic + no transcript).

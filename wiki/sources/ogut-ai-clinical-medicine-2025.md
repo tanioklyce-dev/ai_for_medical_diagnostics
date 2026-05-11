@@ -6,6 +6,7 @@ published: 2025-09-16
 ingested: 2026-05-10
 source_path: raw/clinpract-15-00169.pdf
 url: https://www.mdpi.com/2039-7283/15/9/169
+pmc_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12468291/
 doi: 10.3390/clinpract15090169
 journal: Clinics and Practice (MDPI)
 volume: 15, 169
