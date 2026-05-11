@@ -48,7 +48,7 @@ Klyce is the **standards-body architect** of how corneal topography is represent
 - **ANSI Committee on Ophthalmic Optics**, member of the Corneal Topography Standards Effort (1994–1998) and ASCRS ANSI Representative (2004–).
 - **ISO/TC 172/SC 7** (International Organization for Standardization, Optics and Optical Instruments, Subcommittee 7), expert (2004–) — Ophthalmic optics and instruments.
 - **DICOM Working Group 9 (Ophthalmology)** — Team Leader, Corneal Topography Standard (2011–2013); ongoing member of revision workgroup for Corneal Topography Map IOD (2025–).
-- **ASCRS Telemedicine Task Force**, Chairman (2018–2020) — relevant background for the *Klyce Underserved* presentation in `raw/` (.pptx, not yet ingested).
+- **ASCRS Telemedicine Task Force**, Chairman (2018–2020).
 - **ASCRS FDA and Innovation Committee** member (2024–).
 - **NIH** — Special reviewer for NIH DRG Visual Sciences A1 Study Section (1979–); two terms on the National Advisory Eye Council Corneal Diseases Panel (1980–81, 1984–85); NEI Workshop on Corneal Biophysics Steering Committee (1989–90).
 
@@ -134,7 +134,6 @@ Klyce occupies a **specialty-specific** parallel to several connecting figures t
 
 ## Open / follow-up
 
-- The *Klyce Underserved Fin dist.pptx* presentation in `raw/` (109 MB) appears related to the ASCRS Telemedicine Task Force chair role (2018–2020); not yet ingested pending conversion. Likely relevant for any wiki coverage of telemedicine equity in ophthalmology.
 - The Klyce 2026 CV lists **560+ publications** and **patents** sections that have not been individually ingested; a follow-up ingest of specific high-citation papers (e.g., Wilson/Klyce 1991 on quantitative descriptors; Klyce/Smolek 1993 on excimer-laser PRK topography; Maeda/Klyce 1995 *Arch Ophthalmol* comparison-of-detection-methods paper) would deepen the rung-2 and rung-3 coverage but is not currently prioritized.
 - Whether the modern Tomey / Nidek / Oculus topographer screening pipelines incorporate **deep-learning** components alongside the engineered-index pipeline is plausible but not directly cited in the wiki's current sources; would need primary documentation.
 - The 1990 CLAO Everett Kinsey Lecture and 1996 AAO Whitney Sampson Lecture transcripts would be useful primary sources for the contemporary framing of corneal-topography AI in the 1990s.

@@ -124,4 +124,4 @@ Sources: `raw/1327.pdf` (Maeda/Klyce/Smolek IOVS June 1995, 9 pp, *Neural Networ
 
 **Cited but not yet in `raw/`**: Klyce/Karon/Smolek *J Refract Surg* 2005;21(suppl):617–22 (primary description of Nidek Corneal Navigator); Lozano-Castaneda 2023 *Diagnostics* MDPI systematic review.
 
-**Deferred**: `raw/Klyce Underserved Fin dist.pptx` (109 MB PowerPoint, needs conversion); `raw/claudes-constitution_webPDF_26-02.02a.pdf` (indirect relevance, deferred per prior decision).
+**Deferred**: `raw/claudes-constitution_webPDF_26-02.02a.pdf` (indirect relevance, deferred per prior decision).

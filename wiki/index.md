@@ -64,7 +64,6 @@ Content catalog for the AI-for-medical-diagnostics wiki. Updated on every ingest
 
 ## Awaiting ingest (in `raw/`)
 - `raw/claudes-constitution_webPDF_26-02.02a.pdf` — Anthropic, Claude's Constitution *(relevance to medical diagnostics: indirect; deployment-safety / refusal behavior in clinical contexts)*
-- `raw/Klyce Underserved Fin dist.pptx` — Klyce presentation on underserved populations (109 MB .pptx; likely telemedicine/equity relevance via ASCRS Telemedicine Task Force chair role 2018–2020); needs PowerPoint→text conversion before ingest
 
 ## Used as biographical-update inputs (not separate source pages)
 - `raw/KLYCECV2026.pdf` — Klyce 2026 full CV (49 pp); primary source for the rich biographical content in [stephen-klyce](entities/stephen-klyce.md)
